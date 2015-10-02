@@ -1,0 +1,372 @@
+﻿body{
+ /*	   font-size:62.5% */
+}
+.bordered {
+/*	border:medium black solid; */
+}
+input.ms-long {
+    width: 97%;
+}
+
+#banner {
+	width:100%;
+	height:120px;
+	background-color:#F2F2F2;
+	position:absolute;
+}
+
+#banner_middle{
+	width: 1024px;
+    margin: 0 auto;
+    height:120px;
+    position:relative;
+}
+
+#main_content{
+	position:relative;
+	width: 1024px;
+    margin: 0 auto;
+    top:150px;
+}
+
+#homelink{
+	position:absolute;
+	top:10px;
+	left:260px;
+	color:white;
+	background-color:maroon;
+	padding:2px 7px 2px 7px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#homelink a{
+	text-decoration:none;
+	font-weight:bolder;
+	color:white;
+}
+
+#AboutLinks{
+	position:absolute;
+	top:10px;
+	left:460px;
+	color:white;
+	background-color:olive;
+	padding:2px 7px 2px 7px;
+	font-family: Arial, Helvetica, sans-serif;
+} 
+
+#AboutLinks span{
+	padding-left:7px;
+}
+
+#search_container{
+	position:absolute;
+	top:10px;
+	left:760px;
+	width:250px;
+}
+
+#menu_bar{
+	position:absolute;
+	height:32px;
+	background: linear-gradient(grey, black);
+	width:100%;
+}
+
+#menu_bar div{
+	padding-top:7px;
+	width: 1024px;
+    margin: 0 auto;
+}
+#menu_bar div span{
+	border-right:2px solid black;
+	color:white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+	padding-top:8px;
+	padding-bottom:7px;
+	padding-right:7px;
+	padding-left:4px;
+}
+
+#menu_bar div span a{
+	text-decoration:none;
+	color:white;
+}
+
+#NewsStoryDiv{
+    padding-top:15px;
+    padding-bottom:7px;
+}
+
+#NewsStory{
+    font-family: "nta", Arial, sans-serif;
+    font-size: 27px;
+    line-height: 1.11111111;
+    font-weight: 400;
+    text-transform: none;
+    color: #6f777b;
+    margin-bottom: 5px;
+}
+
+#NewsArticleTitle{
+    font-family: "nta", Arial, sans-serif;
+    font-size: 36px;
+    line-height: 1.11111111;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: bold;
+    color:black;
+    padding-bottom:10px;
+}
+
+#NewsSummary {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+
+#TopHeaderDiv{
+    width:100%;    
+}
+
+#TopHeaderDiv div{
+    padding-top:5px;
+}
+
+#TopLeftHeaderDiv{
+    float:left;
+    width:40%;
+}
+
+#TopMiddleHeaderDiv{
+    float:left;
+    width:auto;
+}
+
+#TopRightHeaderDiv{
+    float:right;
+    width:40%;
+}
+
+#MiddleDiv{
+    padding-top:5px;        
+}
+
+#BottomDiv #bottomTopDiv #BottomMiddleDiv #BottomBottom{
+    width:100%;
+}
+
+#BottomTopLeftDiv{
+    float:left;
+    width:40%;
+}
+
+#BottomTopMiddleDiv{
+
+}
+
+#BottomTopRightDiv{
+    float:right;
+    width:40%;
+}
+
+#BottomMiddleLeftDiv{
+    float:left;
+    width:40%;
+}
+
+#BottomMiddleMiddleDiv div{    
+    display:inline;
+    font-style:normal;
+    font-family:Arial;
+    color:#003399;
+    line-height:24px;
+    font-size:1.1em;
+}
+
+#BottomMiddleRightDiv{
+    float:right;
+    width:40%;
+}
+
+#BottomDiv div{
+    padding-top:5px;
+}
+
+#BottomBottom{
+    clear:both;
+    width:40%;
+}
+
+#ArticleDate{
+    margin-top: 5px;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: none;
+}
+
+/*Master Page Footer*/
+#Footer{ 
+    top:160px;     
+    width:1024px;
+    margin: 0 auto;    
+    position:relative;
+    font-family: Arial;
+    color:#003399;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+#Footer_Left{
+    width:40%;
+    float:left;
+}
+
+
+div#Footer_Middle_Top div#Footer_Middle_Bottom{
+    width:100%;
+    padding:5px;
+}
+
+div#Footer_Right{
+    width:25%;
+    float:right;
+}
+
+
+/*Classes*/
+
+.Centred{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.Caption{
+    font-style: italic;
+    font-family:Arial;
+    word-wrap:break-word;
+    color:#636363;
+    font-size:1.1em;
+    font-weight:lighter;
+}
+
+.Quote{
+    margin:5px;
+    font-family:Arial;
+    color:#aec0c9;
+    font-size:1.2em;
+    font-weight:bold;
+}
+
+.Source{
+    font-family:Arial;
+    font-style:italic;
+    word-wrap:break-word;
+    font-size:1.1em;
+    font-weight:lighter;
+}
+
+.Copyright{
+    font-family:Arial;
+    margin-bottom:2px;
+    color:#003399;
+    font-size:1.1em;
+    font-weight:normal;
+}
+
+/*Display Templates*/
+
+/*---MOD_NewsitemSingles Display Template*/
+.NewsItemPictureContainer{
+    float:left;
+    padding-right:17px;
+}
+
+.NewsItemSingleTitle{
+    font-weight:bold;
+    color:#5A5C92;
+    text-decoration:none;
+    font-size:24px;
+    line-height:1.25;
+    font-family:Arial;
+}
+
+.NewsItemSingleDesc{
+    font-family: Arial;
+    font-size:19px;
+    line-height:1.32;
+    font-weight:400;
+    text-transform:none;
+    padding-top:7px;
+    padding-bottom:3px;
+}
+
+.NewsItemSingleImg{
+    height:auto;
+    width:auto;
+    max-width:580px;
+    max-height:360px;     
+}
+
+
+/*---MOD_Control Display Template - to change container li from vertical to horizontal*/
+#MOD_ControlList_Horizontal{
+    overflow:auto;
+    padding-left:0px;
+}
+#MOD_ControlList_Horizontal li{
+    float:left;
+    display:block;
+    width:320px;
+}
+
+/*---MOD_NewsPicture3Lines Display Template*/
+
+.PictureImgLink{
+    width:auto;
+    height:auto;
+    max-width:300px;
+    max-height:195px;
+}
+
+
+.Picture3LinesContainer{
+    margin-bottom: 5px;    
+}
+
+.Picture3LinesDataContainer{
+
+}
+
+.Picture3LinesImageContainer{
+    margin-bottom:5px
+}
+
+.Picture3LinesImg{
+    border:none;
+    -webkit-tap-highlight-color: transparent;    
+    width:300px;
+    height:195px;
+}
+
+.mod-noWrap{
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.clearfix:after {
+/*Does nothing in browse mode - see SiteInEditMode.css for effect in Auth*/
+}
+
+/*
+    This can be set at top level of o365 under Company Profile and Theme and then prevent overwrite
+    .o365cs-base.o365cs-topnavBGColor-2{
+    background-color:#000 !important;
+}*/
