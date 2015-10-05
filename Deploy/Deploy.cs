@@ -12,26 +12,8 @@ namespace SPDeploy
 {
     public class Deploy
     {
-
-        public SecureString GetPasswordFromConsoleInput()
-        {
-            ConsoleKeyInfo info;
-
-            SecureString securePassword = new SecureString();
-            do
-            {
-                info = Console.ReadKey(true);
-                if (info.Key != ConsoleKey.Enter)
-                {
-                    securePassword.AppendChar(info.KeyChar);
-                }
-            }
-            while (info.Key != ConsoleKey.Enter);
-            return securePassword;
-        }
-
-
-        public void UploadFile(ClientContext Context, 
+            
+        public void UploadMasterPage(ClientContext Context, 
             string FolderRelativeURL, 
             string RelativeItemUrl, 
             string SourceFilePath)

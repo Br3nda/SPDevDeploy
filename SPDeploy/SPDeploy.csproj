@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,6 +60,16 @@
       <Project>{0e057f1f-4a3e-4bc6-a9b1-d800700cae7b}</Project>
       <Name>Deploy</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master Page Gallery\DI\CSS\Site.css" />
+    <Content Include="Master Page Gallery\DI\CSS\SiteInEditMode.css" />
+    <Content Include="Master Page Gallery\DI\DisplayTemplates\MOD_ControlList.html" />
+    <Content Include="Master Page Gallery\DI\DisplayTemplates\MOD_NewsItemSingle.html" />
+    <Content Include="Master Page Gallery\DI\DisplayTemplates\MOD_NewsPicture3Lines.html" />
+    <Content Include="Master Page Gallery\DI\JS\App.js" />
+    <Content Include="Master Page Gallery\DI\MasterPage\Peters.html" />
+    <Content Include="Master Page Gallery\DI\Pagelayouts\MoD.DI.NewsArticle.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
