@@ -10,9 +10,51 @@ using Microsoft.SharePoint.Client;
 
 namespace SPDeploy
 {
+    /// <summary>
+    /// Note the idea behind this class is that it could be easily changed from being called by a console
+    /// App to be called by a Provider Hosted Add-in
+    /// </summary>
     public class Deploy
     {
-            
+
+        public void CreateSiteCollection()
+        {
+
+        }
+
+        public void SetMasterPage()
+        {
+
+        }
+
+        public void CreateSite(ClientContext context,
+            string UrlOfSiteRelativeToRoot,
+            string NameOfSite,
+            string Description)
+        {
+            Web rootWeb = context.Site.RootWeb;
+            context.Load(rootWeb,  w => w.CustomMasterUrl);
+
+            WebCreationInformation wci = new WebCreationInformation();
+            wci.Url = UrlOfSiteRelativeToRoot;
+            wci.Title = NameOfSite;
+            wci.Description = Description;
+            wci.UseSamePermissionsAsParentSite = true;
+            wci.WebTemplate = "BLANKINTERNET#0";
+            wci.Language = 1033;
+
+            Web subWeb = context.Site.RootWeb.Webs.Add(wci);
+            context.ExecuteQuery();
+
+            //Update MasterPage
+            subWeb.CustomMasterUrl = rootWeb.CustomMasterUrl;
+            subWeb.MasterUrl = rootWeb.CustomMasterUrl;
+            subWeb.Update();
+            context.Load(subWeb);
+            context.ExecuteQuery();
+
+        }
+           
         public void UploadMasterPage(ClientContext Context, 
             string FolderRelativeURL, 
             string RelativeItemUrl, 

@@ -15,7 +15,8 @@ namespace SPDeploy
         static void Main(string[] args)
         {                        
             
-
+            //This console application can be run from a developers machine on to their own O365 instance
+            //and deployed into Staging and live by simply updating config values
             using (var context = new ClientContext(GetConfigSetting("SharePointSiteURL")))
             {
                 context.Credentials = new SharePointOnlineCredentials(GetConfigSetting("Username"), GetPassword());
@@ -23,7 +24,23 @@ namespace SPDeploy
                 context.ExecuteQuery();
                 Log(string.Format("Connected to:{0}", context.Web.Title));
 
-                UploadMasterPage(context);
+                
+                //TODO: Need to create a Site Collection here                
+
+                //***The below works to upload a MasterPage and can be extended to upload all the other
+                //***artefacts from their respective folders
+                //UploadMasterPage(context);
+
+                //TODO: Need to set the MasterPage
+
+                //***The below works to create a site and can be extended to read from XML file and create
+                //***Complex structure if needed
+                //CreateSiteStructure(context);
+
+                //TODO: Configure the Pages library of each site to:
+                //Set a default content type
+                //Set Approvals on and Versioning
+
 
                 
     
@@ -33,9 +50,11 @@ namespace SPDeploy
             }
         }
 
-        private static void CreateSiteStructure()
+        private static void CreateSiteStructure(ClientContext context)
         {
-
+            //Iterate through an XML file of the site structure and create as follows...
+            Deploy deploy = new Deploy();
+            deploy.CreateSite(context, "MytestSite", "MyNamedTestSite", "Some random description");
         }
 
         private static void UploadMasterPage(ClientContext context)
