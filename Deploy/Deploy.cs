@@ -17,15 +17,12 @@ namespace SPDeploy
     public class Deploy
     {
 
+        #region SiteCollectionAndSiteStuff
         public void CreateSiteCollection()
         {
 
         }
-
-        public void SetMasterPage()
-        {
-
-        }
+        
 
         public void CreateSite(ClientContext context,
             string UrlOfSiteRelativeToRoot,
@@ -54,7 +51,9 @@ namespace SPDeploy
             context.ExecuteQuery();
 
         }
-           
+        #endregion
+
+        #region MasterPageStuff
         public void UploadMasterPage(ClientContext Context, 
             string FolderRelativeURL, 
             string RelativeItemUrl, 
@@ -110,23 +109,14 @@ namespace SPDeploy
             
         }
 
-        private ListItem GetItemFromListByUrl(ClientContext context, List list ,string Url)
+
+        public void SetMasterPage()
         {
-            CamlQuery camlQuery = new CamlQuery();
-            StringBuilder sb = new StringBuilder();
-            sb.Append("<View><Query><Where><Contains><FieldRef Name='FileLeafRef'/><Value Type='Text'>");
-            sb.Append(Url);
-            sb.Append("</Value></Contains></Where></Query><RowLimit>100</RowLimit></View>");
 
-            camlQuery.ViewXml = sb.ToString();
-            ListItemCollection items = list.GetItems(camlQuery);
-
-            context.Load(items);
-            context.ExecuteQuery();
-
-            return items[0];
         }
+        #endregion
 
+        #region ContentTypeStuff
         /// <summary>
         /// Gets a ContentType object based on a Content Type Name
         /// </summary>
@@ -145,6 +135,50 @@ namespace SPDeploy
             return ct;
 
         }
+        #endregion
+
+        #region ItemStuff
+        private ListItem GetItemFromListByUrl(ClientContext context, List list ,string Url)
+        {
+            CamlQuery camlQuery = new CamlQuery();
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<View><Query><Where><Contains><FieldRef Name='FileLeafRef'/><Value Type='Text'>");
+            sb.Append(Url);
+            sb.Append("</Value></Contains></Where></Query><RowLimit>100</RowLimit></View>");
+
+            camlQuery.ViewXml = sb.ToString();
+            ListItemCollection items = list.GetItems(camlQuery);
+
+            context.Load(items);
+            context.ExecuteQuery();
+
+            return items[0];
+        }
+        #endregion
+
+        #region FieldStuff
+        /// <summary>
+        /// Adds a field to a context, doesn't add to DefaultView, expects name attribute of XML to be set 
+        /// to use for internalname - hence the Hint flag
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="FldXML"></param>
+        public string CreateFields(ClientContext context, string FldXML)
+        {
+            Web rootWeb = context.Site.RootWeb;
+
+            rootWeb.Fields.AddFieldAsXml(FldXML,false,AddFieldOptions.AddFieldInternalNameHint);
+            try
+            {
+                context.ExecuteQuery();
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                return string.Format("Failed to create {0}. failed with exception {1}", FldXML, ex.Message);
+            }
+        }
+        #endregion
 
 
     }

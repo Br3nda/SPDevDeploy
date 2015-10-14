@@ -62,6 +62,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fields\FieldDefinition.xml" />
     <Content Include="Master Page Gallery\DI\CSS\Site.css" />
     <Content Include="Master Page Gallery\DI\CSS\SiteInEditMode.css" />
     <Content Include="Master Page Gallery\DI\DisplayTemplates\MOD_ControlList.html" />
@@ -70,6 +71,9 @@
     <Content Include="Master Page Gallery\DI\JS\App.js" />
     <Content Include="Master Page Gallery\DI\MasterPage\Peters.html" />
     <Content Include="Master Page Gallery\DI\Pagelayouts\MoD.DI.NewsArticle.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ContentTypes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

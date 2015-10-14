@@ -1,0 +1,3405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- START MoD.DI.PageBase-->
+  <Field
+	      ID="{0E5DE0FC-1081-481d-B126-58BCE7BE78C3}"
+	      Name="MODDIPageHeaderText"
+	      DisplayName="Page Header Text"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{6E1CA87C-AD1E-4B7D-97C6-3B525EC4C6B1}"
+	      Name="MODDIPageHeaderImage"
+	      DisplayName="Page Header Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{C05358FA-C56F-4FDA-AF1F-745CE10D9E83}"
+	      Name="MODDIPageContent"
+	      DisplayName="Page Content"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{E9869A84-C8BF-4ef0-889D-D30030BEC590}"
+	      Name="MODDIPageContent2"
+	      DisplayName="Page Content2"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+
+  <Field
+	      ID="{CCA26454-23AF-4225-8727-D08EDCA18D04}"
+	      Name="MODDIPageContent3"
+	      DisplayName="Page Content3"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{63E15A1D-8ABE-4d07-9B72-324F0098AB81}"
+	      Name="MODDIPageContent4"
+	      DisplayName="Page Content4"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{19B7B50D-8585-4e45-A754-0450258ACC00}"
+	      Name="MODDIPageContent5"
+	      DisplayName="Page Content5"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+
+  <Field
+	      ID="{8C6650D7-0C86-4EA4-BD81-DE38CD396CE6}"
+	      Name="MODDIPublisher"
+	      DisplayName="Publisher"
+	      Type="User"
+	      Group="DIIF"
+	      Required="TRUE"
+	      List="UserInfo">
+  </Field>
+  <Field
+	      ID="{9F591207-91DF-436F-ABD6-198F755EFEEA}"
+	      Name="MODDIPublisherName"
+	      DisplayName="Publisher Name"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="TRUE"
+	      MaxLength="255">
+  </Field>
+  <Field
+	      ID="{EF8B120B-0AC5-4ACE-A47B-FCD1AB19C86B}"
+	      Name="MODDIPublisherEmailAddress"
+	      DisplayName="Publisher Email Address"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="TRUE"
+	      MaxLength="255">
+  </Field>
+
+  <Field Name="MODDIRestricted"
+	      FromBaseType="FALSE"
+	      Type="Choice"
+	      DisplayName="Security Classification"
+	      Required="FALSE"
+	      Format="Dropdown"
+	      FillInChoice="FALSE"
+	      Group="DIIF"
+	      ID="{075900FC-9531-42E5-B11D-CE675616BCCC}">
+    <Default>UNCLASSIFIED</Default>
+    <CHOICES>
+      <CHOICE>UNCLASSIFIED</CHOICE>
+      <CHOICE>RESTRICTED</CHOICE>
+    </CHOICES>
+  </Field>
+
+  <Field ID="{8D543ECB-76C1-4EEC-A655-41A024AE8732}"
+	      Name="MODDIPublishDate"
+	      DisplayName="Publish Date"
+	      Type="DateTime" Group="DIIF"
+	      Required="TRUE"
+	Format="DateTime"
+	      StorageTZ="UTC"
+	      CalType="0" >
+    <Default>[today]</Default>
+  </Field>
+  
+
+
+  <Field
+	      ID="{0002AB26-0351-44ce-976D-6E771E033196}"
+	      Name="MODDILayoutHelper"
+	      DisplayName="Layout Helper"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE"
+	      MaxLength="255">
+  </Field>
+  <Field
+	      ID="{25C0A4C5-36CC-4357-9B7A-60D44DF049DC}"
+	      Name="MODDISourceTLB"
+	      DisplayName="Source TLB"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE"
+	      MaxLength="255">
+  </Field>
+  <Field
+    Type="Boolean"
+    DisplayName="Organisation Home"
+    Group="DIIF"
+    ID="{19a7af73-1b17-45fb-b1b5-0865a216a705}"
+    StaticName="OrganisationHome"
+    Name="OrganisationHome"
+    Description="Indicate that the page is to be shown in the organisation finder."
+    Required="FALSE">
+    <Default>0</Default>
+  </Field>
+
+  <Field
+      ID="{6172A4F1-6B61-4140-BA36-E74CCBC15EA4}"
+      Name="MODDISiteInformationTLB"
+      DisplayName="Site Information TLB"
+      Type="Text"
+      Group="DIIF"
+      Required="FALSE"  >
+  </Field>
+  <Field
+      ID="{D3313FD1-3AFC-46f0-87DC-09BFADF020D7}"
+      Name="MODDISiteInformationORG"
+      DisplayName="Site Information ORG"
+      Type="Text"
+      Group="DIIF"
+      Required="FALSE" >
+  </Field>
+  <Field
+      ID="{51312DE9-7D97-4bef-B3B9-0D3604FBF808}"
+      Name="MODDISiteInformationUNIT"
+      DisplayName="Site Information Unit"
+      Type="Text"
+      Group="DIIF"
+      Required="FALSE" >
+  </Field>
+
+
+    <Field Type="Choice" 
+        DisplayName="Find Page By Webpart Finder" 
+        Description="Experiment to pilot finder values" 
+        Required="FALSE" 
+        FillInChoice="FALSE" 
+        Format ="RadioButtons"   
+        Group="DIIF" 
+        ID="{1939139f-9897-4c39-a6d0-93191c618a2d}" 
+        SourceID="{7939dabc-34ec-45e9-9f21-7dfba50a5188}" 
+        StaticName="MODDISearchFinderResults" 
+        Name="MODDISearchFinderResults" >
+        <CHOICES>
+			<CHOICE>0.None</CHOICE>
+            <CHOICE>1.Find by organisation finder</CHOICE>
+            <CHOICE>2.Find by location finder</CHOICE>
+            <CHOICE>3.Find by key personnel</CHOICE>
+            <CHOICE>4.Find by tool finder</CHOICE>
+            <CHOICE>5.Find in sports and social</CHOICE>
+        </CHOICES>
+    </Field>
+
+
+    <!-- END MoD.DI.PageBase-->
+
+  <!-- START MoD.DI.Announcement-->
+  <Field
+	      ID="{AEBA8350-E7BC-4B8D-B8FB-9B2C4D9F90C0}"
+	      Name="MODDIExpires"
+	      DisplayName="Expires"
+	      Type="DateTime"
+	      Format="DateOnly"
+	      StorageTZ="UTC">
+  </Field>
+  <Field
+	      ID="{DB6652B9-5577-4B38-B7AA-233868C8F31A}"
+	      Name="MODDIAnnouncementImage"
+	      DisplayName="Announcement Image"
+	      Type="Image"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{66953940-A1DE-4849-93DD-A6EB15B0C721}"
+	      Name="MODDIAnnouncementImageCaption"
+	      DisplayName="Announcement Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="TRUE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      MaxLength="100">
+  </Field>
+
+  <Field
+	      ID="{5F0876B5-5976-4cd4-B61D-257034F012D4}"
+	      Name="MODDIAdditionalImage1Caption"
+	      DisplayName="Additional Image 1 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="TRUE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      MaxLength="100">
+  </Field>
+
+  <Field
+	      ID="{86F53C5F-88BD-4bef-85C2-A012BB793887}"
+	      Name="MODDIAdditionalImage2Caption"
+	      DisplayName="Additional Image 2 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="TRUE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      MaxLength="100">
+  </Field>
+
+  <Field
+	      ID="{64BB58D6-983E-4733-9BE9-886A7D813378}"
+	      Name="MODDIAdditionalImage3Caption"
+	      DisplayName="Additional Image 3 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="TRUE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      MaxLength="100">
+  </Field>
+
+  <Field
+         ID="{DE2B4D8D-DF82-4af5-9E8F-3612A6065361}"
+         Name="MODDIAdditionalImage4Caption"
+         DisplayName="Additional Image 4 Caption"
+         Type="HTML"
+         Group="DIIF"
+         Required="TRUE"
+         RichText="TRUE"
+         RichTextMode="FullHtml"
+         MaxLength="100">
+  </Field>
+  <Field
+       ID="{AE39CFBD-1010-4598-A10C-FF936DB5B005}"
+       Name="MODDIAdditionalImage5Caption"
+       DisplayName="Additional Image 5 Caption"
+       Type="HTML"
+       Group="DIIF"
+       Required="TRUE"
+       RichText="TRUE"
+       RichTextMode="FullHtml"
+       MaxLength="100">
+  </Field>
+  <Field
+       ID="{D8B67EEE-6FFA-457a-965A-63ADCEF42C82}"
+       Name="MODDIAdditionalImage6Caption"
+       DisplayName="Additional Image 6 Caption"
+       Type="HTML"
+       Group="DIIF"
+       Required="TRUE"
+       RichText="TRUE"
+       RichTextMode="FullHtml"
+       MaxLength="100">
+  </Field>
+
+
+  <Field
+	      ID="{43C6B034-EB71-461e-A943-B3C30AC2DB56}"
+	      Name="MODDIMediaURL"
+	      DisplayName="Media URL"
+	      Type="URL"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{5D221F76-8F97-419d-987C-10EDF843F050}"
+	      Name="MODDIImportant"
+	      DisplayName="Important"
+	      Type="Boolean"
+	      Group="DIIF"
+	      Required="TRUE">
+    <Default>1</Default>
+  </Field>
+  <Field
+	      ID="{CD72020B-1D4F-48d6-8757-F0DD07C51613}"
+	      Name="MODDIShowAsAlert"
+	      DisplayName="Show As Alert"
+	      Type="Boolean"
+	      Group="DIIF"
+	      Required="TRUE">
+    <Default>1</Default>
+  </Field>
+  <Field
+	      ID="{7BF07CA5-A4DA-4018-8C27-EB6A6291BC15}"
+	      Name="MODDIAnnouncementSummary"
+	      DisplayName="Alert Summary"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="TRUE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      MaxLength="100">
+  </Field>
+  <Field
+	      ID="{1D94EF7B-58E4-44f7-9564-953FFE111D84}"
+	      Name="MODDIMoreLinkUrl"
+	      DisplayName="More Link"
+	      Type="URL"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+  <!-- END MoD.DI.Announcement-->
+  <!-- START MoD.DI.BusinessProfile-->
+  <Field
+	      ID="{D6736124-34E7-4842-BD0F-A920C88DBD76}"
+	      Name="MODDIBusinessFullName"
+	      DisplayName="Business Full Name"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+
+  <Field
+          ID="{8804933D-21F5-4635-941C-54C773966C18}"
+          Name="MODDIBusinessProfileHdr"
+          DisplayName="Business Profile Header"
+          Type="Text"
+          Group="DIIF"
+          Required="FALSE">
+  </Field>
+  <Field
+          ID="{BC741F7E-39F4-4d97-AC8D-508F4D0C82F1}"
+          Name="MODDIBusinessProfile"
+          DisplayName="Business Profile Content"
+          Type="HTML"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+  <Field
+          ID="{2647E1F5-A6AC-4c63-84A8-78C722CE6EA1}"
+          Name="MODDIBusinessProfileImage"
+          DisplayName="Business Profile Image"
+          Type="Image"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+  <Field
+          ID="{B8F4F857-CFD9-4009-A3CD-64E356B74F8D}"
+          Name="MODDIBusinessProfileImageCaption"
+          DisplayName="Business Profile Image Caption"
+          Type="HTML"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+
+
+
+
+  <Field
+      ID="{0044F1C6-B7A7-4e98-85AB-E1F3116F4988}"
+      Name="MODDIObjectivesHdr"
+      DisplayName="Objectives Header"
+      Type="Text"
+      Group="DIIF"
+      Required="FALSE">
+  </Field>
+
+  <Field
+	      ID="{9C520393-53C9-4B4D-9ACC-75F7D6A2358A}"
+	      Name="MODDIObjectivesInfo"
+	      DisplayName="Objectives Info"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{A8ED859B-0F39-48f1-880B-12D22485C878}"
+	      Name="MODDIObjectivesInfoImage"
+	      DisplayName="Objectives Info Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{7ADD052D-D4DC-4171-985F-6A51D06C3E81}"
+	      Name="MODDIObjectivesInfoImageCaption"
+	      DisplayName="Objectives Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+      ID="{6F590052-66FE-4420-B42E-2653247A2EC9}"
+      Name="MODDIStrategyPlansInfoHdr"
+      DisplayName="Strategy Header"
+      Type="Text"
+      Group="DIIF"
+      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{29AE7AA2-0B18-4545-B76B-EE716EF362E1}"
+	      Name="MODDIStrategyPlansInfo"
+	      DisplayName="Strategy Plans Info"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{36E7B235-184C-4350-B29F-2B5C7760DCD7}"
+	      Name="MODDIStrategyPlansImage"
+	      DisplayName="Strategy Plans Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{16A0B879-8AAA-48a3-B070-DFBE02B815B5}"
+	      Name="MODDIStrategyPlansImageCaption"
+	      DisplayName="Strategy Plans Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+      ID="{60872019-63A6-4990-8F02-58407750A33E}"
+      Name="MODDILocationsRepresentedHdr"
+      DisplayName="Locations Represented Header"
+      Type="Text"
+      Group="DIIF"
+      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{A17C46A6-E6F2-48F6-AD88-85A140E22683}"
+	      Name="MODDILocationsRepresented"
+	      DisplayName="Locations Represented"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{6DB4E7F5-DA07-4d47-AD18-4B3E3EF6E557}"
+	      Name="MODDILocationsRepresentedImage"
+	      DisplayName="Locations Represented Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{ACFD2F82-A621-4592-88A4-6EE34F03285F}"
+	      Name="MODDILocationsRepresentedImageCaption"
+	      DisplayName="Locations represented Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+           ID="{8E171BDD-14A9-49ba-AFF8-9C36F6CE444F}"
+           Name="MODDISearchLocations"
+           DisplayName="Find in location finder"
+           Type="Boolean"
+           Group="DIIF"
+           Required="TRUE">
+          <Default>0</Default>
+  </Field>
+    <!-- END MoD.DI.BusinessProfile-->
+  <!-- START MoD.DI.KeyPersonnelProfile-->
+  <Field
+        ID="{B27AE8DB-9038-4afd-BBE0-6EF18C603C96}"
+        Name="MODDIResponsibilitiesObjectivesHdr"
+        DisplayName="Responsibility and Objectives Header"
+        Type="Text"
+        Group="DIIF"
+        Required="FALSE">
+  </Field>
+
+  <Field
+	      ID="{408FDBFC-3709-4035-81F7-ACF88C1B922B}"
+	      Name="MODDIResponsibilitiesObjectivesContent"
+	      DisplayName="Responsibilities and Objectives Content"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{FA3DE577-3B5E-4dbd-86F0-002A0C2243B7}"
+	      Name="MODDIResponsibilitiesObjectivesImage"
+	      DisplayName="Responsibilities Objectives Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{F2C1A649-34C6-446e-B048-CA60ABDCEB89}"
+	      Name="MODDIResponsibilitiesObjectivesImageCaption"
+	      DisplayName="Responsibilities Objectives Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+          ID="{0A9AF2A2-ED05-46c5-80E3-5A63A42BBA2B}"
+          Name="MODDIOrganisationChartHdr"
+          DisplayName="Organisation Chart Header"
+          Type="Text"
+          Group="DIIF"
+          Required="FALSE">
+  </Field>
+  <Field
+	      ID="{6A5B04D3-6AF7-46DF-B279-55A7063BBF51}"
+	      Name="MODDIOrganisationChartImage"
+	      DisplayName="Organisation Chart Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{37115106-1FB3-4AB8-9B29-CE1A8F2D725F}"
+	      Name="MODDIRole"
+	      DisplayName="Role"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <!-- END MoD.DI.KeyPersonnelProfile-->
+  <!-- START MoD.DI.LocationProfile-->
+  <Field
+	      ID="{FB49E3A2-1CE3-4F86-A0EF-9F743BE09749}"
+	      Name="MODDILocationAddress"
+	      DisplayName="Location Address"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="TRUE">
+  </Field>
+  <Field
+          ID="{4CD85BE5-073E-48b8-AF78-3780AE8AAC39}"
+          Name="MODDIDirectionsHdr"
+          DisplayName="Directions Header"
+          Type="Text"
+          Group="DIIF"
+          Required="FALSE">
+  </Field>
+
+  <Field
+	      ID="{427EBAA8-5687-4FE3-992F-75AF1D4AE5EE}"
+	      Name="MODDIDirections"
+	      DisplayName="Directions"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{2D71FDB1-5121-401B-B972-0D5EA1C58A65}"
+	      Name="MODDIDirectionsImage"
+	      DisplayName="Directions Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{362055C4-A746-4978-ACDF-34B9DFB03791}"
+	      Name="MODDIDirectionsImageCaption"
+	      DisplayName="Directions Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+          ID="{BFC82BE2-071A-4a44-A852-F97A8374314F}"
+          Name="MODDIReceptionSecurityHdr"
+          DisplayName="Reception Header"
+          Type="Text"
+          Group="DIIF"
+          Required="FALSE">
+  </Field>
+  <Field
+		  ID="{EFB3036C-9F32-42ED-8438-77D979BFFE91}"
+		  Name="MODDIReceptionSecurityInfo"
+		  DisplayName="Reception Security Info"
+		  Type="HTML"
+		  Group="DIIF"
+		  Required="FALSE"
+		  RichText="TRUE"
+		  RichTextMode="FullHtml">
+  </Field>
+  <Field
+	ID="{F29BD798-6F18-42b1-A26B-CD9C17813ED2}"
+	    Name="MODDIReceptionSecurityImage"
+	    DisplayName="Reception Security Image"
+	    Type="Image"
+	    Group="DIIF"
+	    Required="FALSE"
+	    RichText="TRUE"
+	    RichTextMode="FullHtml">
+  </Field>
+  <Field
+	  ID="{9B57DE3E-EF85-462a-9599-3946910A0575}"
+	  Name="MODDIReceptionSecurityImageCaption"
+	  DisplayName="Reception Security Image Caption"
+	  Type="HTML"
+	  Group="DIIF"
+	  Required="FALSE"
+	  RichText="TRUE"
+	  RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+        ID="{73913133-57B9-4e01-8B8A-A44C2ADB7A14}"
+        Name="MODDIPassesParkingHdr"
+        DisplayName="Passes Parking Header"
+        Type="Text"
+        Group="DIIF"
+        Required="FALSE">
+  </Field>
+
+  <Field
+	      ID="{8D343145-CB44-44E9-AFF1-D9B824D857C9}"
+	      Name="MODDIPassesParkingInfo"
+	      DisplayName="Passes Parking Info"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{91EAE2AE-7689-40b3-A803-34F121929467}"
+	      Name="MODDIParkingPassesImage"
+	      DisplayName="Parking Passes Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{632B7712-7066-4a19-B8DC-27D348F6AFE2}"
+	      Name="MODDIParkingPassesImageCaption"
+	      DisplayName="Parking Passes Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+          ID="{7C1DC470-777E-4243-B6DA-2F1E4F019F7D}"
+          Name="MODDIFacilitiesHdr"
+          DisplayName="Facilities Header"
+          Type="Text"
+          Group="DIIF"
+          Required="FALSE">
+  </Field>
+
+  <Field
+	      ID="{DBC3F772-061D-4F55-A228-AD78A9007F49}"
+	      Name="MODDIFacilities"
+	      DisplayName="Facilities"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{280EFEF3-F094-4fba-851A-5243709E7EA9}"
+	      Name="MODDIFacilitiesImage"
+	      DisplayName="Facilities Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{915E268D-1A53-4125-A608-53055E261808}"
+	      Name="MODDIFacilitiesImageCaption"
+	      DisplayName="Facilities Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{5876D647-69CE-4F7C-BC89-A236173F929B}"
+	      Name="MODDITeamSiteURL"
+	      DisplayName="Team Site URL"
+	      Type="URL"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <!-- END MoD.DI.LocationProfile-->
+  <!-- START MoD.DI.NewsArticle-->
+
+  <!-- New section (Header Images)-->
+  <Field
+	      ID="{44C45918-13F6-4060-A0E0-A05102C1A25B}"
+	      Name="MODDIHeaderImageLeft"
+	      DisplayName="Header Image Left"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{6D17F481-1814-4563-8BAC-B84A24343CB5}"
+	      Name="MODDIHeaderImageLeftCaption"
+	      DisplayName="Header Image Left Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{B951009C-70D8-432f-997C-E055D5B4B1E1}"
+	      Name="MODDIHeaderImageLeftCopyright"
+	      DisplayName="Header Image Left Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{A2BCE023-A2EA-43fd-8C6B-C0B02516A054}"
+	      Name="MODDIHeaderImageRight"
+	      DisplayName="Header Image Right"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{DD80DE32-70AE-4c9a-A7E3-88AB6DF09326}"
+	      Name="MODDIHeaderImageRightCaption"
+	      DisplayName="Header Image Right Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{50CE54E7-7189-4070-A6AB-3745AF33026C}"
+	      Name="MODDIHeaderImageRightCopyright"
+	      DisplayName="Header Image Right Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{541573F2-D148-441a-B739-B5153670937B}"
+	      Name="MODDIHeaderQuoteLeft"
+	      DisplayName="Header Quote Left"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{BD3D947A-8E36-4eab-98F9-B0D994A9EDBE}"
+	      Name="MODDIHeaderQuoteLeftSource"
+	      DisplayName="Header Quote Left Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{762A80CA-2A7F-4d0f-B6B3-48C829C45EB8}"
+	      Name="MODDIHeaderQuoteRight"
+	      DisplayName="Header Quote Right"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{86CFCD35-3C77-40ea-B97D-B73467171B81}"
+	      Name="MODDIHeaderQuoteRightSource"
+	      DisplayName="Header Quote Right Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+
+
+
+
+  <Field
+	      ID="{0CC6332D-C9DA-49F7-AB97-0EFC52326F66}"
+	      Name="MODDITopImageLeft"
+	      DisplayName="Top Image Left"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{02E05948-F10C-421F-998D-2128CDA0B5BC}"
+	      Name="MODDITopImageLeftCaption"
+	      DisplayName="Top Image Left Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{0C77698B-00EB-479b-9706-36E846ED4E66}"
+	      Name="MODDITopImageLeftCopyright"
+	      DisplayName="Top Image Left Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{B2C4C90E-0E58-40a1-B1EB-1C4C2635163E}"
+	      Name="MODDITopImageRight"
+	      DisplayName="Top Image Right"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{D3754704-66DE-49e7-AAF7-EE0A243B717E}"
+	      Name="MODDITopImageRightCaption"
+	      DisplayName="Top Image Right Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{059B9475-2F32-4588-8E72-B3AD493F193D}"
+	      Name="MODDITopImageRightCopyright"
+	      DisplayName="Top Image Right Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{910E7E86-872D-4fe3-9BB7-CF3D60A2DE75}"
+	      Name="MODDITopQuoteLeft"
+	      DisplayName="Top Quote Left"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{55FCD8D4-8FE1-4630-AD11-1F1B43735CC2}"
+	      Name="MODDITopQuoteLeftSource"
+	      DisplayName="Top Quote Left Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{D5C6A6B4-5B22-40c0-8B88-B659C8CF5234}"
+	      Name="MODDITopQuoteRight"
+	      DisplayName="Top Quote Right"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{9C66A4FE-0D8D-4ef9-BC20-37FD4578213F}"
+	      Name="MODDITopQuoteRightSource"
+	      DisplayName="Top Quote Right Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{DD429414-68F9-4cdc-A917-0C5630B197C4}"
+	      Name="MODDIMiddleImageLeft"
+	      DisplayName="Middle Image Left"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{3E5DFCB7-ED80-41d0-BC76-65F4515E7B6D}"
+	      Name="MODDIMiddleImageLeftCaption"
+	      DisplayName="Middle Image Left Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{BCA2C2CD-B40A-4b4b-B63D-6372A4C589C7}"
+	      Name="MODDIMiddleImageLeftCopyright"
+	      DisplayName="Middle Image Left Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{99EC8EED-EE28-43bd-B8FA-32A30C2744C5}"
+	      Name="MODDIMiddleImageRight"
+	      DisplayName="Middle Image Right"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{5D890C17-7D1A-4c10-B943-DA97DF78D64A}"
+	      Name="MODDIMiddleImageRightCaption"
+	      DisplayName="Middle Image Right Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{5CB04C65-B769-484b-8801-AE810BDDB0D6}"
+	      Name="MODDIMiddleImageRightCopyright"
+	      DisplayName="Middle Image Right Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{5E23C9C9-B32B-4228-9F93-3ED5EE08A508}"
+	      Name="MODDIMiddleQuoteLeft"
+	      DisplayName="Middle Quote Left"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{4B0955D8-0409-4b26-8AB3-A1D087A92610}"
+	      Name="MODDIMiddleQuoteLeftSource"
+	      DisplayName="Middle Quote Left Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{FE40C3CD-5B78-4cf9-8A03-096617CDD139}"
+	      Name="MODDIMiddleQuoteRight"
+	      DisplayName="Middle Quote Right"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{E00C109F-3EEF-4b1e-9D15-279273817576}"
+	      Name="MODDIMiddleQuoteRightSource"
+	      DisplayName="Middle Quote Right Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{02C7A3C0-6F93-4fd8-9A42-F6514D61E542}"
+	      Name="MODDIBottomImageLeft"
+	      DisplayName="Bottom Image Left"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{3F9DD402-3BDA-4a4d-85B6-807D5AF98CDC}"
+	      Name="MODDIBottomImageLeftCaption"
+	      DisplayName="Bottom Image Left Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{AFD993F9-12A8-4809-9FA9-32985974404B}"
+	      Name="MODDIBottomImageLeftCopyright"
+	      DisplayName="Bottom Image Left Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{785F2983-D840-46a9-8B7B-503ECB87ADF0}"
+	      Name="MODDIBottomImageRight"
+	      DisplayName="Bottom Image Right"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{72E2D04C-77A5-4756-904B-8C73C109DC74}"
+	      Name="MODDIBottomImageRightCaption"
+	      DisplayName="Bottom Image Right Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{A4188E20-5FAA-42f0-9C35-1832A1C8BC90}"
+	      Name="MODDIBottomImageRightCopyright"
+	      DisplayName="Bottom Image Right Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{F7901413-CF9E-45cd-A96A-594922ADF12E}"
+	      Name="MODDIBottomQuoteLeft"
+	      DisplayName="Bottom Quote Left"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{915B1A57-1BEE-4a78-B1A1-8558B862198B}"
+	      Name="MODDIBottomQuoteLeftSource"
+	      DisplayName="Bottom Quote Left Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{BEE64713-D946-4699-8A9A-46E11486045C}"
+	      Name="MODDIBottomQuoteRight"
+	      DisplayName="Bottom Quote Right"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+
+  <!-- New section (Footer Images)-->
+  <Field
+	      ID="{095F75A9-0E8B-4fec-80F9-F7D6AD4CABBB}"
+	      Name="MODDIFooterImageLeft"
+	      DisplayName="Footer Image Left"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{BF522163-F79B-484f-AC33-FE5EE089BF4C}"
+	      Name="MODDIFooterImageLeftCaption"
+	      DisplayName="Footer Image Left Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{96A27EAF-A996-49f1-983E-0F9A86DDB838}"
+	      Name="MODDIFooterImageLeftCopyright"
+	      DisplayName="Footer Image Left Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{07C0DBBA-1FEA-4d16-A048-5FFC916D067A}"
+	      Name="MODDIFooterImageRight"
+	      DisplayName="Footer Image Right"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{69E7E928-12F2-4c7c-85C5-E153D00C95FA}"
+	      Name="MODDIFooterImageRightCaption"
+	      DisplayName="Footer Image Right Caption"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{F9FDC7EE-2769-44d5-BBB6-398FE3DC77F6}"
+	      Name="MODDIFooterImageRightCopyright"
+	      DisplayName="Footer Image Right Copyright"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{8325E34B-49B6-4da1-8DFB-A65089F7FA33}"
+	      Name="MODDIFooterQuoteLeft"
+	      DisplayName="Footer Quote Left"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{F5025196-B499-46ef-A656-EF35EE8B44FA}"
+	      Name="MODDIFooterQuoteLeftSource"
+	      DisplayName="Footer Quote Left Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{68779249-52EE-46e7-BFED-B93BBCEDED8E}"
+	      Name="MODDIFooterQuoteRight"
+	      DisplayName="Footer Quote Right"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{EF9C6B2B-6F70-4cd1-BD8E-CE36CA731132}"
+	      Name="MODDIFooterQuoteRightSource"
+	      DisplayName="Footer Quote Right Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+
+
+
+  <Field
+	      ID="{71A0F48B-0F21-40f6-9185-5168724432C8}"
+	      Name="MODDIBottomQuoteRightSource"
+	      DisplayName="Bottom Quote Right Source"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{F34FCBA5-03BE-4854-B389-337CFFD597DF}"
+	      Name="MODDIRelatedNews"
+	      DisplayName="Related News"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{ABCBE13D-5059-4918-B5C5-9BAB646E9EE3}"
+	      Name="MODDIRelatedTopics"
+	      DisplayName="Related Topics"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <!-- END MoD.DI.NewsArticle-->
+  <!-- START MoD.DI.ProfilePageBase-->
+
+  <Field
+      ID="{2C079CFA-4E8E-4877-8EC6-F86BC33213AA}"
+      Name="MODDIObjectivesHdr"
+      DisplayName="Objectives Header"
+      Type="Text"
+      Group="DIIF"
+      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{18869543-7FE4-494c-AE83-67E90B6F80A1}"
+	      Name="MODDIAboutImage"
+	      DisplayName="About Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{85F0ACC7-1B0B-40fd-9396-735F35D59FE2}"
+	      Name="MODDIAboutImageCaption"
+	      DisplayName="About Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <!-- END MoD.DI.ProfilePageBase-->
+  <!-- START MoD.DI.ToolProfilePage-->
+  <Field
+	      ID="{95BBA9C6-2A0F-489b-BD0D-736921195EBB}"
+	      Name="MODDIToolHyperlink"
+	      DisplayName="Tool Hyperlink"
+	      Type="URL"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+  <Field
+	      ID="{1FE6945B-8D91-40ba-AEBB-C89988FD1996}"
+	      Name="MODDIToolImage"
+	      DisplayName="Tool Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{C4D474D7-316E-45fc-9915-EA4523A6024C}"
+	      Name="MODDIToolImageCaption"
+	      DisplayName="Tool Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{0EE1975D-31F3-4479-B89B-A43560107A0A}"
+	      Name="MODDIVersionNumber"
+	      DisplayName="Version Number"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+
+  <!-- END MoD.DI.ToolProfilePage-->
+  <!-- START MoD.DI.DocumentType-->
+  <Field
+	      ID="{B80E39A7-7CCB-4a7b-AD6B-259255F87BAC}"
+	      Name="MODDIDocumentType"
+	      DisplayName="Document Type"
+	      Group="DIIF"
+	      Type="Choice"
+	      Format="Dropdown"
+	      FillInChoice="FALSE"
+	      Required="TRUE">
+    <Default>Other</Default>
+    <CHOICES>
+      <CHOICE>DIN</CHOICE>
+      <CHOICE>JSP</CHOICE>
+      <CHOICE>Allied Publication</CHOICE>
+      <CHOICE>Newsletter</CHOICE>
+      <CHOICE>IBN</CHOICE>
+      <CHOICE>Other</CHOICE>
+    </CHOICES>
+  </Field>
+  <Field
+	      ID="{23ED4E89-67BB-4a73-96EE-0B92204CE2D2}"
+	      Name="MODDIStatus"
+	      DisplayName="Status"
+	      Group="DIIF"
+	      Type="Choice"
+	      Format="Dropdown"
+	      FillInChoice="FALSE"
+	      Required="TRUE">
+    <Default>Current</Default>
+    <CHOICES>
+      <CHOICE>Current</CHOICE>
+      <CHOICE>Superseded</CHOICE>
+      <CHOICE>Cancelled</CHOICE>
+    </CHOICES>
+  </Field>
+  <Field
+	      ID="{3ADAEF9E-B047-4fc9-87DC-18A81FF0CC09}"
+	      Name="MODDIDescription"
+	      DisplayName="Description"
+	      Type="Note"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+  <Field
+	      ID="{F8A6E615-90B5-4cb9-9C9B-1C4D56823046}"
+	      Name="MODDIAuthor"
+	      DisplayName="Author"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{FC9689DC-D599-4361-9275-1B428037BFCF}"
+	      Name="MODDIDocumentPublisher"
+	      DisplayName="Publisher"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{DBD4EB00-8209-4952-8823-648921FC6351}"
+	      Name="MODDIDocumentID"
+	      DisplayName="Document ID"
+	      Type="Integer"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <!-- END MoD.DI.DocumentType-->
+  <!-- START MoD.DI.IndexPage -->
+  <Field
+	      ID="{00F2B691-8D0D-4f49-84AF-A858674FEC86}"
+	      Name="MODDIHeader1"
+	      DisplayName="Header 1"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{E7A3E7BE-624C-46a3-B3CC-86C2AD9429F6}"
+	      Name="MODDIContent1"
+	      DisplayName="Content 1"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{033E94AD-A1EE-4b44-867A-B43F9CEAB234}"
+	      Name="MODDIContentImage1"
+	      DisplayName="Content Image 1"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{5D87EA8F-F5D0-4f76-BD39-39499397A4DD}"
+	      Name="MODDIHeader2"
+	      DisplayName="Header 2"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{8725B7AF-DCF3-4d71-BC3A-9DA79815D0F0}"
+	      Name="MODDIContent2"
+	      DisplayName="Content 2"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{5B40624C-38FB-4220-8A46-C725DD05FFC8}"
+	      Name="MODDIContentImage2"
+	      DisplayName="Content Image 2"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{80F58153-2E00-49f8-9C78-B1576D1103E0}"
+	      Name="MODDIHeader3"
+	      DisplayName="Header 3"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{20B5EEE6-E16F-4a7e-A661-3E11833F9E89}"
+	      Name="MODDIContent3"
+	      DisplayName="Content 3"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{2E33E3C8-70C0-4268-B592-44C877B26C7D}"
+	      Name="MODDIContentImage3"
+	      DisplayName="Content Image 3"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{288BD7EC-FE58-4b76-A64D-7BCD72822FD9}"
+	      Name="MODDIHeader4"
+	      DisplayName="Header 4"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{777468F9-66B2-4ae4-84C4-5A5F1CE8C33D}"
+	      Name="MODDIContent4"
+	      DisplayName="Content 4"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{B00688E1-7F19-4faf-91B4-90BF9F73980A}"
+	      Name="MODDIContentImage4"
+	      DisplayName="Content Image 4"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{765A2A09-B1F7-4a6d-8DF7-45C7EB80C261}"
+	      Name="MODDIHeader5"
+	      DisplayName="Header 5"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{400F8916-C841-4ef0-87A8-3821291E5D1E}"
+	      Name="MODDIContent5"
+	      DisplayName="Content 5"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{571ACBE0-6EE2-4bf9-BEF8-038017A66F0F}"
+	      Name="MODDIContentImage5"
+	      DisplayName="Content Image 5"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{A514DF4C-14AE-4eba-846D-7A1FD77A36E3}"
+	      Name="MODDIHeader6"
+	      DisplayName="Header 6"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{8662B3B6-1D16-4911-A2FC-C85C401AA8BE}"
+	      Name="MODDIContent6"
+	      DisplayName="Content 6"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{7732D39E-C1B7-4115-BA3C-275998E36937}"
+	      Name="MODDIContentImage6"
+	      DisplayName="Content Image 6"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{C30E9D67-D312-4ede-9E74-588A2ED0F396}"
+	      Name="MODDIHeader7"
+	      DisplayName="Header 7"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{23D6040C-49A3-4af6-B917-D3D8F15FECB6}"
+	      Name="MODDIContent7"
+	      DisplayName="Content 7"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{AFB03B5D-AA5F-4d1f-BBB7-29A548A5AF22}"
+	      Name="MODDIContentImage7"
+	      DisplayName="Content Image 7"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{CD5D7223-6CBF-45a8-9248-A8B111EA8EDF}"
+	      Name="MODDIHeader8"
+	      DisplayName="Header 8"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{1F30284A-F5C9-4fdb-AF77-F1767A79179A}"
+	      Name="MODDIContent8"
+	      DisplayName="Content 8"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{D07D007F-0803-49d5-BA69-D5F4250B0E4D}"
+	      Name="MODDIContentImage8"
+	      DisplayName="Content Image 8"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{4F5B8108-FCD5-424a-A5A0-D4538222AB7A}"
+	      Name="MODDIHeader9"
+	      DisplayName="Header 9"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{0A9C78ED-DE40-42a3-9CFC-553152B8138C}"
+	      Name="MODDIContent9"
+	      DisplayName="Content 9"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{97470FE0-751A-4a82-A7A3-DC3B7165198F}"
+	      Name="MODDIContentImage9"
+	      DisplayName="Content Image 9"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{A7AD9D06-25D5-49f5-A580-F52E1D12AA67}"
+	      Name="MODDIHeader10"
+	      DisplayName="Header 10"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{D867DA5E-31DE-4128-954E-40CC7428A7F6}"
+	      Name="MODDIContent10"
+	      DisplayName="Content 10"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{1B35D3D6-1F7D-4820-B9E4-97EFCABD7469}"
+	      Name="MODDIContentImage10"
+	      DisplayName="Content Image 10"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{2F56894D-A118-4c84-BB46-3DB29197DB36}"
+	      Name="MODDIHeader11"
+	      DisplayName="Header 11"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{A5DE4058-329A-44eb-B6D6-253F09147385}"
+	      Name="MODDIContent11"
+	      DisplayName="Content 11"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{C384D7F9-9636-4954-BBE9-07FC8741E26C}"
+	      Name="MODDIContentImage11"
+	      DisplayName="Content Image 11"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{B09147E3-683C-4628-844F-FDB669B7D8AB}"
+	      Name="MODDIHeader12"
+	      DisplayName="Header 12"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{760918D7-79AD-4bf1-AA55-B2817E56F46E}"
+	      Name="MODDIContent12"
+	      DisplayName="Content 12"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{232791FE-EBCC-480c-B04C-741263747D5C}"
+	      Name="MODDIContentImage12"
+	      DisplayName="Content Image 12"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{294DD9BF-0542-4b10-BDC6-FB2C687945AB}"
+	      Name="MODDIHeader13"
+	      DisplayName="Header 13"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{F7EC84BF-64C0-4b8a-AAEE-2DA1CFDD4E80}"
+	      Name="MODDIContent13"
+	      DisplayName="Content 13"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{C4B75649-5F8D-4a0f-BB74-E56BC4ECDB1B}"
+	      Name="MODDIContentImage13"
+	      DisplayName="Content Image 13"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{6C128CB6-9646-417b-A142-B866AEC8CAB8}"
+	      Name="MODDIHeader14"
+	      DisplayName="Header 14"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{AE33B5DE-A8B2-4869-A06C-6112B1F5E6BB}"
+	      Name="MODDIContent14"
+	      DisplayName="Content 14"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{0C6384CD-EA16-40c1-BC36-04129637656B}"
+	      Name="MODDIContentImage14"
+	      DisplayName="Content Image 14"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{D99DE6FA-A241-4633-A7BA-BC5009C67905}"
+	      Name="MODDIHeader15"
+	      DisplayName="Header 15"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{0E3B8D31-ED84-446c-BD4A-5A62A9E25D12}"
+	      Name="MODDIContent15"
+	      DisplayName="Content 15"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{56014183-1569-4a7c-B37D-5C9E360CC379}"
+	      Name="MODDIContentImage15"
+	      DisplayName="Content Image 15"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{BE483D3C-9CF3-4bbf-8FE6-364AE79A9C50}"
+	      Name="MODDIHeader16"
+	      DisplayName="Header 16"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{2E68EF3A-CB51-4dfc-BEEC-E84E1EB4B683}"
+	      Name="MODDIContent16"
+	      DisplayName="Content 16"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{FCDAA242-690A-4e85-87A8-565A1C33291E}"
+	      Name="MODDIContentImage16"
+	      DisplayName="Content Image 16"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{EB1C7A68-9249-4782-9A8B-B99D1630FF3D}"
+	      Name="MODDIHeader17"
+	      DisplayName="Header 17"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{98FEDF69-D6A7-49e8-A763-6111E7227923}"
+	      Name="MODDIContent17"
+	      DisplayName="Content 17"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{F42F6138-7E98-409c-B3DC-E83591D3C4A1}"
+	      Name="MODDIContentImage17"
+	      DisplayName="Content Image 17"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{DD24799D-2BB3-47e4-9DA8-BB2829124CD4}"
+	      Name="MODDIHeader18"
+	      DisplayName="Header 18"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{649AB751-78B1-4cc0-BEED-3F767A9D43A0}"
+	      Name="MODDIContent18"
+	      DisplayName="Content 18"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{B2505843-56BB-4581-8187-BEDD8A7ED3E6}"
+	      Name="MODDIContentImage18"
+	      DisplayName="Content Image 18"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{3755A359-796B-467c-B808-758A7982E96C}"
+	      Name="MODDIHeader19"
+	      DisplayName="Header 19"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{468010D3-8B07-4c78-8681-EAE4A339ECC3}"
+	      Name="MODDIContent19"
+	      DisplayName="Content 19"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{06FC8AE6-65FA-4538-9270-F1A6BD34EC7F}"
+	      Name="MODDIContentImage19"
+	      DisplayName="Content Image 19"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{DD468277-3E6E-4cb0-A470-EB0156DADC2C}"
+	      Name="MODDIHeader20"
+	      DisplayName="Header 20"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{B5A1E866-F751-434c-A48F-C1AD4F9401FF}"
+	      Name="MODDIContent20"
+	      DisplayName="Content 20"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{75225005-EFE7-4646-8397-615262621C04}"
+	      Name="MODDIHeader21"
+	      DisplayName="Header 21"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{1E9E811F-2D8B-490d-979B-DF3E1836DBB9}"
+	      Name="MODDIContent21"
+	      DisplayName="Content 21"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{405A2201-D9CA-4056-9153-43C240C63EBD}"
+	      Name="MODDIHeader22"
+	      DisplayName="Header 22"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{D4C48534-70EC-4289-AE95-838387FDAC13}"
+	      Name="MODDIContent22"
+	      DisplayName="Content 22"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{F3CEB1BE-177F-4b09-982E-23E3C89C8FD8}"
+	      Name="MODDIHeader23"
+	      DisplayName="Header 23"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{04C28195-FDFD-452f-9D3A-1F2CE8C57409}"
+	      Name="MODDIContent23"
+	      DisplayName="Content 23"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{7497036E-01FC-40e4-B941-F8A578D8C93C}"
+	      Name="MODDIHeader24"
+	      DisplayName="Header 24"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{F7385C5C-6958-402a-B5C2-5AC6AED599FF}"
+	      Name="MODDIContent24"
+	      DisplayName="Content 24"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+	      ID="{62F87004-D3B9-4ac7-B26E-B296CA3F6545}"
+	      Name="MODDIHeader25"
+	      DisplayName="Header 25"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{9C735400-D7F1-4622-9B04-6C646E4BD189}"
+	      Name="MODDIContent25"
+	      DisplayName="Content 25"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{3A2AD0D0-3EEC-40d1-923F-7AF33D4240D6}"
+	      Name="MODDIHeader26"
+	      DisplayName="Header 26"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{D47B41BD-0834-4334-ADDE-C2AFF31947C6}"
+	      Name="MODDIContent26"
+	      DisplayName="Content 26"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+
+
+
+  <Field
+	      ID="{BD51DCC5-60C1-42af-B0A3-CB51D1CFD974}"
+	      Name="MODDIContentImage20"
+	      DisplayName="Content Image20"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <!-- END MoD.DI.IndexPage -->
+
+
+  <!-- New Captions for structured content pages -->
+  <Field
+	      ID="{AD34CF89-2BBF-47fa-8375-170244D08D89}"
+	      Name="MODDIContentImage1Caption"
+	      DisplayName="Content Image 1 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{EB854D5D-3FA7-4e43-9742-F112B04020D7}"
+	      Name="MODDIContentImage2Caption"
+	      DisplayName="Content Image 2 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{239DE39C-B298-4607-BBF8-32E6A786849A}"
+	      Name="MODDIContentImage3Caption"
+	      DisplayName="Content Image 3 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{21A1E350-3500-441d-9285-AE7F263435A7}"
+	      Name="MODDIContentImage4Caption"
+	      DisplayName="Content Image 4 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{51847CD8-1ACF-4fed-B210-BA5CB246491F}"
+	      Name="MODDIContentImage5Caption"
+	      DisplayName="Content Image 5 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{AD41BDF9-55E8-4007-B48C-7ED1F0998022}"
+	      Name="MODDIContentImage6Caption"
+	      DisplayName="Content Image 6 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{05B8A26F-3A82-403d-9E26-0F78496B8723}"
+	      Name="MODDIContentImage7Caption"
+	      DisplayName="Content Image 7 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{134A9F62-E4D6-4f52-8507-9CEA118DE7FB}"
+	      Name="MODDIContentImage8Caption"
+	      DisplayName="Content Image 8 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{BF0EB4F6-A8E5-44e9-A0F5-A67DA47DCC9C}"
+	      Name="MODDIContentImage9Caption"
+	      DisplayName="Content Image 9 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{B499BD0B-F056-43f5-B5FF-4831DE552D65}"
+	      Name="MODDIContentImage10Caption"
+	      DisplayName="Content Image 10 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{4FAD68D3-2F82-4b7c-9BB8-658F4C8369D5}"
+	      Name="MODDIContentImage11Caption"
+	      DisplayName="Content Image 11 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{33D00432-DC01-4e8e-9CCB-31898E2E467A}"
+	      Name="MODDIContentImage12Caption"
+	      DisplayName="Content Image 12 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{031269CC-FA46-45bb-9769-B7D9536AED6E}"
+	      Name="MODDIContentImage13Caption"
+	      DisplayName="Content Image 13 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{F6C69934-9309-4285-B85A-F0DAF3D98860}"
+	      Name="MODDIContentImage14Caption"
+	      DisplayName="Content Image 14 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{25DBE704-5552-4c25-A4EB-1AA168E6EB5B}"
+	      Name="MODDIContentImage15Caption"
+	      DisplayName="Content Image 15 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{A9961D77-3DBA-4c8b-A2E2-4840AD7DF8EA}"
+	      Name="MODDIContentImage16Caption"
+	      DisplayName="Content Image 16 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{45E260E3-99DF-4644-856E-5A36419A805E}"
+	      Name="MODDIContentImage17Caption"
+	      DisplayName="Content Image 17 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{738C5582-1E6C-4661-9462-30E3CCE92FB5}"
+	      Name="MODDIContentImage18Caption"
+	      DisplayName="Content Image 18 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{37284237-C1D5-4d01-BC97-D76DA5866866}"
+	      Name="MODDIContentImage19Caption"
+	      DisplayName="Content Image 19 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{EBB27122-A387-4cef-9B38-D65AE43AFEB6}"
+	      Name="MODDIContentImage20Caption"
+	      DisplayName="Content Image 20 Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <!-- End Captions for structured content pages-->
+
+
+  <!-- START Shared Fields-->
+  <Field
+	      ID="{0FBA9B5F-4C80-4baf-A6B9-E406092CDB7A}"
+	      Name="MODDITargetConsumers"
+	      DisplayName="Target Consumers"
+	      Group="DIIF"
+	      Type="Choice"
+	      Format="Dropdown"
+	      FillInChoice="FALSE"
+	      Required="TRUE">
+    <Default>All</Default>
+    <CHOICES>
+      <CHOICE>All</CHOICE>
+      <CHOICE>Army</CHOICE>
+      <CHOICE>Navy</CHOICE>
+      <CHOICE>RAF</CHOICE>
+      <CHOICE>Estates</CHOICE>
+      <CHOICE>Central</CHOICE>
+      <CHOICE>PJHQ</CHOICE>
+      <CHOICE>DES</CHOICE>
+      <CHOICE>SIT</CHOICE>
+    </CHOICES>
+  </Field>
+  <Field
+	      ID="{82C919D1-D257-4841-A20E-F1F01DFD0100}"
+	      Name="MODDIKeywords"
+	      DisplayName="Keywords"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+  <Field
+	      ID="{A1B3FFFF-BAF9-4EB3-83E5-E7CF237659EF}"
+	      Name="MODDIRelatedLinks"
+	      DisplayName="Related Links"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{3347503E-5B76-459E-9EED-1CD25B8563D0}"
+	      Name="MODDIRelatedPeople"
+	      DisplayName="Related People"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{E0CD2778-0BE7-4AF6-A94F-91BCABF7D26D}"
+	      Name="MODDIRelatedDocuments"
+	      DisplayName="Related Documents"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{61D999CD-AF10-4F04-B966-547C1C0AA323}"
+	      Name="MODDIVideoURL"
+	      DisplayName="Video URL"
+	      Type="URL"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{389A2208-F661-417F-B467-03A716F2E7B1}"
+	      Name="MODDIAudioURL"
+	      DisplayName="Audio URL"
+	      Type="URL"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+
+
+
+
+  <Field
+    ID="{CE6FAA22-3B9C-47ce-A5C8-78A0E90324E9}"
+    Name="MODDIKeyContactsHdr"
+    DisplayName="Key Contacts Header"
+    Type="Text"
+    Group="DIIF"
+    Required="FALSE">
+  </Field>
+  <Field
+	      ID="{5729D3BF-03A9-44B0-87AA-BE5D746B5A17}"
+	      Name="MODDIKeyContacts"
+	      DisplayName="Key Contacts"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{B91A494E-7902-4028-BB82-28B0A7ED2848}"
+	      Name="MODDIKeyContactsImage"
+	      DisplayName="Key Contacts Image"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{8C3DECA4-DC28-43b4-978C-62A1B65E7462}"
+	      Name="MODDIKeyContactsImageCaption"
+	      DisplayName="Key Contacts Image Caption"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+          ID="{483CC910-33C1-4f2e-9755-2A8741C431FB}"
+          Name="MODDINewsAnnouncementsHdr"
+          DisplayName="News and Annnoucement Header"
+          Type="Text"
+          Group="DIIF"
+          Required="FALSE">
+  </Field>
+
+  <Field
+	      ID="{4EB814D4-375A-40C9-82D5-F39A9ED84D67}"
+	      Name="MODDINewsAnnouncements"
+	      DisplayName="News Announcements"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{DEF43D04-CC11-4451-8EB4-24A8E2468D7D}"
+	      Name="MODDIAdditionalContent1Header"
+	      DisplayName="Additional Content 1 Header"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{87E2F862-F952-4138-A93B-8AE95E850CAC}"
+	      Name="MODDIAdditionalContent1"
+	      DisplayName="Additional Content 1"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{F07ECA20-6ED7-4629-AAE7-1EB35C526EDD}"
+	      Name="MODDIAdditionalImage1"
+	      DisplayName="Additional Image 1"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{4855DBF6-41E4-4241-A6F2-8C3B19E1C231}"
+	      Name="MODDIAdditionalContent2Header"
+	      DisplayName="Additional Content 2 Header"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{FFC4A900-5081-48bb-BAC5-9E6F63121F92}"
+	      Name="MODDIAdditionalContent2"
+	      DisplayName="Additional Content 2"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{D5ACFCA6-539B-468d-97CE-ED4213C7D200}"
+	      Name="MODDIAdditionalImage2"
+	      DisplayName="Additional Image 2"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{3B703F7E-E802-4961-959D-C22873F32A40}"
+	      Name="MODDIAdditionalContent3Header"
+	      DisplayName="Additional Content 3 Header"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{6A7BF2EE-1B84-4367-ADA0-C8708B76FFA7}"
+	      Name="MODDIAdditionalContent3"
+	      DisplayName="Additional Content 3"
+	      Type="HTML"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+	      ID="{EE1ED4CF-4D41-40cf-920D-B48D4835E781}"
+	      Name="MODDIAdditionalImage3"
+	      DisplayName="Additional Image 3"
+	      Type="Image"
+	      Group="DIIF"
+	      Required="FALSE"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml">
+  </Field>
+  <Field
+      ID="{FAF138E9-53D4-404b-90A4-D4E7611B89B6}"
+      Name="MODDIAdditionalContent4Header"
+      DisplayName="Additional Content 4 Header"
+      Type="Text"
+      Group="DIIF"
+      Required="FALSE">
+  </Field>
+  <Field
+          ID="{B9E4C5BE-B848-4d07-8A3F-65A48F2A0A94}"
+          Name="MODDIAdditionalContent4"
+          DisplayName="Additional Content 4"
+          Type="HTML"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+  <Field
+          ID="{39E34CBF-436F-4e75-8D13-D99FF5FAA448}"
+          Name="MODDIAdditionalImage4"
+          DisplayName="Additional Image 4"
+          Type="Image"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+
+  <Field
+    ID="{49FE0315-4903-4569-A813-5CDEB2A1476E}"
+    Name="MODDIAdditionalContent5Header"
+    DisplayName="Additional Content 5 Header"
+    Type="Text"
+    Group="DIIF"
+    Required="FALSE">
+  </Field>
+  <Field
+          ID="{D051C736-7D86-4ff5-BC39-11C5E9EBBFE7}"
+          Name="MODDIAdditionalContent5"
+          DisplayName="Additional Content 5"
+          Type="HTML"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+  <Field
+          ID="{5319CF4F-85B3-49f2-81AB-6E92E3EA21DE}"
+          Name="MODDIAdditionalImage5"
+          DisplayName="Additional Image 5"
+          Type="Image"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+  <Field
+  ID="{44FF2CD1-D1B7-4482-A2B1-BEE913C7395C}"
+  Name="MODDIAdditionalContent6Header"
+  DisplayName="Additional Content 6 Header"
+  Type="Text"
+  Group="DIIF"
+  Required="FALSE">
+  </Field>
+  <Field
+          ID="{8AB2F2DF-8636-4fbf-8662-A93DC6226E6A}"
+          Name="MODDIAdditionalContent6"
+          DisplayName="Additional Content 6"
+          Type="HTML"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+  <Field
+          ID="{CD53B635-B954-4ad3-8D96-A8D6D31FC755}"
+          Name="MODDIAdditionalImage6"
+          DisplayName="Additional Image 6"
+          Type="Image"
+          Group="DIIF"
+          Required="FALSE"
+          RichText="TRUE"
+          RichTextMode="FullHtml">
+  </Field>
+
+
+  <Field
+	      ID="{53062A85-BFB7-4c80-B2D7-F61C372B1AC2}"
+	      Name="MODDIOriginator"
+	      DisplayName="Originator"
+	      Group="DIIF"
+	      Type="Choice"
+	      Format="Dropdown"
+	      FillInChoice="FALSE"
+	      Required="FALSE">
+    <Default>Central</Default>
+    <CHOICES>
+      <CHOICE>Army</CHOICE>
+      <CHOICE>Navy</CHOICE>
+      <CHOICE>RAF</CHOICE>
+      <CHOICE>Estates</CHOICE>
+      <CHOICE>Central</CHOICE>
+      <CHOICE>PJHQ</CHOICE>
+      <CHOICE>DES</CHOICE>
+      <CHOICE>SIT</CHOICE>
+    </CHOICES>
+  </Field>
+  <!-- Branding for Master Page-->
+  <Field
+	      ID="{917A1936-44FB-4de3-9BF8-BAF75400FA25}"
+	      Name="MODDIOrganisationLogo"
+	      DisplayName="Organisational Logo"
+	      Type="URL"
+	      Format="Hyperlink"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{C7F15027-DB02-4be3-BF56-D3387426BD8B}"
+	      Name="MODDIOrganisationImage"
+	      DisplayName="Organisational Image"
+	      Type="URL"
+	      Format="Hyperlink"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{9AF222BC-6535-4d9f-B9D9-D0057F78E476}"
+	      Name="MODDIOrgBackGroundColour"
+	      DisplayName="Organisation Background Colour"
+	      Type="Number"
+	      Min="0"
+	      Max="16777215"
+	      Decimals="0"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{7AE360AB-6B2A-4021-B67B-13753B266922}"
+	      Name="MODDIOrgFontColour"
+	      DisplayName="Organisation Font Colour"
+	      Type="Number"
+	      Min="0"
+	      Max="16777215"
+	      Decimals="0"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{DB6D319E-436F-4ebe-B99A-E6033A639B57}"
+	      Name="MODDIOrgSeparatorColour"
+	      DisplayName="Organisation Separator Colour"
+	      Type="Number"
+	      Min="0"
+	      Max="16777215"
+	      Decimals="0"
+	      Group="DIIF"
+	      Required="FALSE">
+  </Field>
+  <Field
+	  Type="Number"
+	  DisplayName="RGB Colour"
+	  Description="RGB value of the approved organisation colour."
+	  Required="TRUE"
+	  Min="0"
+	  Max="16777215"
+	  Decimals="0"
+	  Group="DIIF"
+	  ID="{2b5f18be-18b5-4743-a520-c85f2b9b2498}"
+	  StaticName="RGBColour"
+	  Name="RGBColour"
+	  Hidden="FALSE"
+    />
+  <!-- END Branding for Master Page-->
+
+  <!-- END Shared Fields-->
+
+  <!-- Omission errors in  MS design-->
+  <Field
+	      ID="{69F46DB0-2EBC-4f27-98BB-8180DCE107E7}"
+	      Name="MODDIStructuredContent1"
+	      DisplayName="Content 1"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{544B8013-50EA-48fa-A082-F1A7C844D6AC}"
+	      Name="MODDIStructuredContent2"
+	      DisplayName="Content 2"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{1745A510-3C9A-4580-895B-5C0426D72B7D}"
+	      Name="MODDIStructuredContent3"
+	      DisplayName="Content 3"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{FA40822B-3972-4c24-A9AD-B9B82E050C93}"
+	      Name="MODDIStructuredContent4"
+	      DisplayName="Content 4"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{D572A3B7-0F70-42d1-9435-32157EA5DA85}"
+	      Name="MODDIStructuredContent5"
+	      DisplayName="Content 5"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{03A1ACB1-E397-4a66-B448-E0E2B138E825}"
+	      Name="MODDIStructuredContent6"
+	      DisplayName="Content 6"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{E5395701-1A58-45f9-B0D5-DAA2941D6A74}"
+	      Name="MODDIStructuredContent7"
+	      DisplayName="Content 7"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{1EB0C142-BE6F-43df-AD75-6318213D9018}"
+	      Name="MODDIStructuredContent8"
+	      DisplayName="Content 8"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{18A63562-8AF1-4f20-84AB-26B9D3664D23}"
+	      Name="MODDIStructuredContent9"
+	      DisplayName="Content 9"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+
+  <Field
+	      ID="{1EA2E1C4-97B1-48ed-89CA-0303908B2535}"
+	      Name="MODDIStructuredContent10"
+	      DisplayName="Content 10"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{E096E112-E2EC-4308-B839-CCCD263545D8}"
+	      Name="MODDIStructuredContent11"
+	      DisplayName="Content 11"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{F35D75E2-B62D-4d5a-A709-1A426EA0E7FD}"
+	      Name="MODDIStructuredContent12"
+	      DisplayName="Content 12"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{34163E25-B83C-432b-9679-77F7394E3E1C}"
+	      Name="MODDIStructuredContent13"
+	      DisplayName="Content 13"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{257435DA-E5A9-4879-9DA6-BBEEB5047EF7}"
+	      Name="MODDIStructuredContent14"
+	      DisplayName="Content 14"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{B75C4929-6291-46d9-AD00-0A4EC4B24B06}"
+	      Name="MODDIStructuredContent15"
+	      DisplayName="Content 15"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{7C9A8245-E6C5-4b8e-999E-E559797E4193}"
+	      Name="MODDIStructuredContent16"
+	      DisplayName="Content 16"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{A8FE93D6-A785-48a9-B077-899EE0032189}"
+	      Name="MODDIStructuredContent17"
+	      DisplayName="Content 17"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{E3278A00-67DA-4bd2-8CDD-4AF4BE1062E9}"
+	      Name="MODDIStructuredContent18"
+	      DisplayName="Content 18"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{09A29F01-AB3B-40e5-9970-D4C6CF591730}"
+	      Name="MODDIStructuredContent19"
+	      DisplayName="Content 19"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+  <Field
+	      ID="{2993D6E4-5FD9-4bdd-AECF-0ED295046A58}"
+	      Name="MODDIStructuredContent20"
+	      DisplayName="Content 20"
+	      Type="HTML"
+	      Group="DIIF"
+	      RichText="TRUE"
+	      RichTextMode="FullHtml"
+	      Required="FALSE">
+  </Field>
+
+  <!--START MOD.DI.NewsGroups-->
+  <Field
+	      ID="{c662f3f9-cb06-47d4-93cf-51fcb155055e}"
+	      Name="NewsGroup"
+	      DisplayName="News Group"
+	      Type="Text"
+	      Required="FALSE"
+	      MaxLength="255"
+	      Group="DIIF">
+  </Field>
+
+  <Field
+	      ID="{77a63da5-90bf-43b9-921c-66387c6eef69}"
+	      Name="NewsPageUrl"
+	      DisplayName="News Page Url"
+	      Type="Text"
+	      Required="FALSE"
+	      MaxLength="512"
+	      Group="DIIF">
+  </Field>
+
+  <Field
+	      ID="{A1390437-0CF8-4165-BE0A-BA6481B5F871}"
+	      Name="NewsPageTitle"
+	      DisplayName="News Page Title"
+	      Type="Text"
+	      Required="FALSE"
+	      Group="DIIF">
+  </Field>
+
+  <Field
+	      ID="{7f8f7d20-ec47-41b7-9f31-6b35532d41d6}"
+	      Name="NewsImageUrl"
+	      DisplayName="News Image Url"
+	      Type="Text"
+	      Required="FALSE"
+	      Group="DIIF">
+  </Field>
+
+  <Field
+		      ID="{ea65127b-6dd6-43c7-9733-f636cffc15cd}"
+		      Name="NewsArticleIndex"
+		      DisplayName="News Article Index"
+		      Required="FALSE"
+		      Decimals="0"
+		      Group="DIIF"
+		      Type="Number">
+  </Field>
+
+  <!--END MOD.DI.NewsGroups-->
+
+  <!--START ATLAS DIIF WCM Dictionary (MetaEngine) -->
+
+  <Field xmlns:me="http://schemas.metaEngine.com/sharepoint/"
+		   Type="metaEngineChoiceSelector"
+		   DisplayName="Subject Category"
+		   Description="Categories must be selected from the UK Defence Taxonomy"
+		   Required="TRUE"
+		   ID="{EA776756-9A51-4adf-B5B8-A04CE9400520}"
+		   StaticName="SubjectCategory"
+		   Name="SubjectCategory"
+		   FilterableNoRecurrence="FALSE"
+		   Filterable="FALSE"
+		   Sortable="FALSE"
+		   ShowInFileDlg="FALSE"
+		   ShowInVersionHistory="FALSE"
+		   Group="DIIF"
+		   me:ServiceURL="/_layouts/metaEngine/dataconnect/taxonomy"
+		   me:Delimiter="; "
+		   me:MaxLength="255"
+		   me:MaxClientFavourites="10"
+		   me:MinimumPrefixLength="3"
+		   me:EnableFavorites="TRUE"
+		   me:EnableSuggest="TRUE"
+		   me:EnableTree="TRUE"
+		   me:EnableBrowse="TRUE"
+		   me:EnableSearch="TRUE"
+		   me:Sorted="TRUE"
+		   me:AllowMultipleSelection="TRUE"
+		   me:AllowDuplicateSelection="FALSE"
+		   me:OpenTree="TRUE"
+		   me:AutoLoad="FALSE"
+		   me:AutoCompleteSearch="TRUE"
+		   me:InlineSelector="FALSE"
+		   me:HighlightChoices=""
+		   me:DefaultSearchType="0"
+		   me:DefaultTab="4"
+		   me:DefaultsDataSource="List"
+		   me:DefaultsListName="Site Directory"
+       me:RelatedField="Subject_x0020_CategoryOOB"
+         >
+    <CHOICES>
+      <CHOICE>None</CHOICE>
+    </CHOICES>
+  </Field>
+
+
+  <Field Description="Categories must be selected from the UK Defence Taxonomy" Group="DIIF"
+	Name="Subject_x0020_CategoryOOB"
+	ID="{DEAE5961-49D4-4166-8ACB-9673883C74C2}"
+	StaticName="Subject_x0020_CategoryOOB"
+	AllowDeletion="FALSE"
+	ShowInFileDlg="TRUE"
+  ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"
+	DisplayName="MetaEngine Subject Category:" FillInChoice="TRUE" ShowInListSettings="FALSE" ShowInViewForms="TRUE" Required="TRUE"
+	Type="MultiChoice" >
+    <CHOICES>
+      <CHOICE>None</CHOICE>
+    </CHOICES>
+  </Field>
+
+  <Field xmlns:me="http://schemas.metaEngine.com/sharepoint/"
+	       Type="metaEngineChoiceSelector"
+		  DisplayName="Subject Keywords"
+	       Description="Keywords must be selected from the UK Defence Thesaurus"
+		  Required="TRUE"
+		  ID="{8A1CA1BE-5894-4512-8CD0-5C9971FE5F52}"
+		  StaticName="SubjectKeywords"
+		  Name="SubjectKeywords"
+		  FilterableNoRecurrence="FALSE"
+		  Filterable="FALSE"
+		  Sortable="FALSE"
+		  ShowInFileDlg="FALSE"
+		  ShowInVersionHistory="FALSE"
+		  Group="DIIF"
+		  me:ServiceURL="/_layouts/metaEngine/dataconnect/thesaurus"
+		  me:Delimiter="; "
+		  me:MaxLength="255"
+		  me:MaxClientFavourites="10"
+		  me:MinimumPrefixLength="3"
+		  me:EnableFavorites="TRUE"
+		  me:EnableSuggest="TRUE"
+		  me:EnableTree="FALSE"
+		  me:EnableBrowse="TRUE"
+		  me:EnableSearch="TRUE"
+		  me:Sorted="TRUE"
+		  me:AllowMultipleSelection="TRUE"
+		  me:AllowDuplicateSelection="FALSE"
+		  me:OpenTree="TRUE"
+		  me:AutoLoad="FALSE"
+		  me:AutoCompleteSearch="TRUE"
+		  me:InlineSelector="FALSE"
+		  me:HighlightChoices=""
+		  me:DefaultSearchType="0"
+		  me:DefaultTab="4"
+		  me:DefaultsDataSource="List"
+		  me:DefaultsListName="Site Directory"
+      me:RelatedField="Subject_x0020_KeywordsOOB"
+         >
+    <CHOICES>
+      <CHOICE>None</CHOICE>
+    </CHOICES>
+  </Field>
+
+
+  <Field Description="Keywords must be selected from the UK Defence Thesaurus"
+	Group="DIIF"
+	Name="Subject_x0020_KeywordsOOB"
+	ID="{8B8853E1-8ECA-4fd4-AE7D-74BC4836AE26}"
+	StaticName="Subject_x0020_KeywordsOOB"
+	AllowDeletion="FALSE" ShowInFileDlg="TRUE" DisplayName="MetaEngine Subject Keywords" FillInChoice="TRUE"
+  ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"
+  ShowInListSettings="FALSE" ShowInViewForms="TRUE" Required="TRUE" Type="MultiChoice" >
+    <CHOICES>
+      <CHOICE>None</CHOICE>
+    </CHOICES>
+  </Field>
+
+  <Field xmlns:me="http://schemas.metaEngine.com/sharepoint/"
+	  Type="metaEngineTagging"
+		  DisplayName="Local Keywords"
+	       Description="Add a list of comma separated locally used keywords to help you organize and browse items in your site."
+		  Required="FALSE"
+		  ID="{A89CCA03-67F4-4c62-A501-0C14E81E77E1}"
+		  StaticName="LocalKeywords"
+		  Group="DIIF"
+		  Name="LocalKeywords"
+		  me:ServiceURL="/_layouts/metaEngine/dataconnect/thesaurus"
+		  me:MinimumPrefixLength="3"
+		  me:EnableSuggest="TRUE"
+		  me:HighlightChoices=""
+		  me:DefaultsDataSource="List"
+		  me:DefaultsListName="Site Information"
+      me:RelatedField="Local_x0020_KeywordsOOB"
+         >
+  </Field>
+
+  <Field
+		  Description="Add a list of comma separated locally used keywords to help you organize and browse items in your site."
+		  Group="DIIF" Name="Local_x0020_KeywordsOOB"
+		  ID="{27964326-86F0-4e80-A3DB-A1A3290DAC24}"
+		  StaticName="Local_x0020_KeywordsOOB"
+		  Type="MultiChoice" FillInChoice="TRUE" AllowDeletion="FALSE"
+		  ShowInFileDlg="FALSE" ShowInVersionHistory="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"
+		  Required="FALSE" DisplayName="MetaEngine Local Keywords" ShowInListSettings="FALSE" ShowInViewForms="FALSE" />
+
+  <Field xmlns:me="http://schemas.metaEngine.com/sharepoint/"
+		 Type="metaEngineChoiceSelector"
+		 DisplayName="Business Owner"
+		 Description="Enter the organisation that has chief responsibility for the content of this item."
+		 Required="FALSE"
+		 ID="{3AD66390-B5FA-4440-A761-F892DCA87E63}"
+		 StaticName="BusinessOwner"
+		 Name="BusinessOwner"
+		 FilterableNoRecurrence="FALSE"
+		 Filterable="FALSE"
+		 Sortable="FALSE"
+		 ShowInFileDlg="FALSE"
+		 ShowInVersionHistory="FALSE"
+		 Group="DIIF"
+		 me:ServiceURL="/_layouts/metaEngine/dataconnect/units"
+		 me:Delimiter="; "
+		 me:MaxLength="255"
+		 me:MaxClientFavourites="10"
+		 me:MinimumPrefixLength="3"
+		 me:EnableFavorites="TRUE"
+		 me:EnableSuggest="TRUE"
+		 me:EnableTree="FALSE"
+		 me:EnableBrowse="FALSE"
+		 me:EnableSearch="TRUE"
+		 me:Sorted="FALSE"
+		 me:AllowMultipleSelection="FALSE"
+		 me:AllowDuplicateSelection="FALSE"
+		 me:OpenTree="FALSE"
+		 me:AutoLoad="FALSE"
+		 me:AutoCompleteSearch="TRUE"
+		 me:InlineSelector="FALSE"
+		 me:HighlightChoices=""
+		 me:DefaultSearchType="0"
+		 me:DefaultTab="4"
+		 me:DefaultsDataSource="List"
+		 me:DefaultsListName="Site Directory"
+     me:RelatedField="Business_x0020_OwnerOOB"
+         >
+    <CHOICES>
+      <CHOICE>None</CHOICE>
+    </CHOICES>
+  </Field>
+
+  <Field
+       Description="Enter the organisation that has chief responsibility for the content of this item."
+       Group="DIIF"
+       Name="Business_x0020_OwnerOOB"
+       ID="{779729D7-7851-49bd-B331-1894610BA512}" StaticName="Business_x0020_OwnerOOB"
+       ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"
+       AllowDeletion="FALSE" ShowInFileDlg="TRUE" DisplayName="MetaEngine Business Owner" FillInChoice="TRUE" ShowInListSettings="FALSE" ShowInViewForms="TRUE" Required="FALSE" Type="Choice" Format="Dropdown" >
+    <CHOICES>
+      <CHOICE>None</CHOICE>
+    </CHOICES>
+  </Field>
+
+  <Field xmlns:me="http://schemas.metaEngine.com/sharepoint/"
+	       Type="metaEngineChoice"
+	       DisplayName="TLB"
+	       Description="Enter the TLB that has chief responsibility for the content of this item."
+	       ID="{45F382CB-F0E6-40a1-A8EA-BB3ECC3A5A87}"
+	       StaticName="tlb"
+	       Name="tlb"
+         me:IsRequired="FALSE"
+	       me:ServiceURL="/_layouts/metaEngine/dataconnect/tlbs"
+         me:PathField=""
+         me:RelationshipType=""
+         me:Collection=""
+	       me:AllowMultipleSelection="FALSE"
+         me:RelatedField="tlbOOB"
+         Format="Dropdown"
+         FillInChoice="FALSE"
+	       FilterableNoRecurrence="FALSE"
+	       Filterable="FALSE"
+	       Sortable="FALSE"
+	       ShowInFileDlg="FALSE"
+	       ShowInViewForms="FALSE"
+	       ShowInEditForm="FALSE"
+	       ShowInDisplayForm="FALSE"
+	       ShowInNewForm="FALSE"
+	       ShowInVersionHistory="FALSE"
+         />
+  <!--<CHOICES>
+      <CHOICE>None</CHOICE>
+    </CHOICES>
+  </Field>-->
+
+  <Field
+		ID="{E5418151-8CA9-42d8-B82C-C38224B992F0}"
+		Name="tlbOOB"
+		ShowInFileDlg="TRUE"
+		DisplayName="MOD TLB"
+		FillInChoice="FALSE"
+		ShowInListSettings="FALSE"
+    ShowInViewForms="TRUE"
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="TRUE"
+    ShowInVersionHistory="TRUE"
+		Required="FALSE"
+		Type="Choice"
+		Format="Dropdown" >
+    <CHOICES>
+      <CHOICE>None</CHOICE>
+    </CHOICES>
+  </Field>
+
+  <Field xmlns:me="http://schemas.metaEngine.com/sharepoint/"
+		 Type="metaEngineFilteredChoice"
+		 DisplayName="Organisation"
+		 ID="{06774F6F-CF76-4b70-83A3-54F11951C569}"
+		 Description="Enter the organisation that has chief responsibility for the content of this item."
+		 StaticName="org"
+		 Name="org"
+		 me:IsRequired="FALSE"
+		 me:ServiceURL="/_layouts/metaEngine/dataconnect/organisations"
+     me:PathField=""
+     me:RelationshipType=""
+         me:MetaEngineField="parentTLB"
+         me:ParentColumn="tlb"
+		 FilterableNoRecurrence="FALSE"
+		 Filterable="TRUE"
+		 Sortable="TRUE" >
+    <Default />
+  </Field>
+
+  <Field xmlns:me="http://schemas.metaEngine.com/sharepoint/"
+		 Type="metaEngineFilteredChoice"
+		 DisplayName="Unit"
+		 ID="{EFF51911-6F21-4ce3-A4EF-09D7CC34545B}"
+		 Description="Enter the unit that has chief responsibility for the content of this item."
+		 StaticName="unit"
+		 Name="unit"
+		 me:IsRequired="FALSE"
+		 me:ServiceURL="/_layouts/metaEngine/dataconnect/units"
+     me:PathField=""
+     me:RelationshipType=""
+         me:MetaEngineField="parentOrganisation"
+         me:ParentColumn="org"
+		 FilterableNoRecurrence="FALSE"
+		 Filterable="TRUE"
+		 Sortable="TRUE"
+    ShowInFileDlg="FALSE" >
+    <Default />
+  </Field>
+
+
+  <!--END ATLAS DIIF WCM Dictionary-->
+
+  <!--Start of MODDIDocumentBase-->
+
+  <Field
+	      ID="{A958B02F-9145-4cea-B9BC-A234CFEB8315}"
+	      Name="MODDIDocumentOverview"
+	      DisplayName="Document Overview"
+	      Type="Note"
+	      Group="DIIF"
+	      Required="TRUE"
+        NumLines="5">
+  </Field>
+
+  <Field
+	      ID="{E7603ACF-05DB-4bdc-8066-3C21FC87224E}"
+	      Name="MODDIPublisherID"
+	      DisplayName="Publisher ID"
+	      Type="Text"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+
+  <Field
+	      ID="{61C48152-9720-4622-9D05-BF9E7D15A015}"
+	      Name="MODDIPublisherContactDetails"
+	      DisplayName="Author Contact Details"
+	      Type="Note"
+	      Group="DIIF"
+	      Required="TRUE"
+        NumLines="5">
+  </Field>
+
+  <Field
+	      ID="{B9632301-5242-472f-B81F-D93B5791451D}"
+	      Name="MODDIDocumentPublished"
+	      DisplayName="Document Publishing Date"
+        Description="The date the document was published. System generated as the current date but can be over-written by the publisher"
+	      Type="DateTime"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+
+  <Field
+	      ID="{602D07D0-5F15-409b-8266-0F889943C4DF}"
+	      Name="MODDIDocumentCreated"
+	      DisplayName="Document Creation Date"
+        Description="This is the date the document was created by the author, not uploaded by the publisher. System generated from properties of document but can be over-written by the publisher"
+	      Type="DateTime"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+
+  <Field
+	      ID="{8EA379C9-44BF-4fdf-B5AB-01CFD6B4FBFC}"
+	      Name="MODDIDocumentLastUpdated"
+	      DisplayName="Document Last Update Date"
+        Description="System generated from when the document is first uploaded by the publisher and changed if the document is modified or replaced"
+	      Type="DateTime"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+
+  <Field
+	      ID="{8BFBC02E-BB90-42a8-9C88-744A338E9D5B}"
+	      Name="MODDIDocumentExpiryDate"
+	      DisplayName="Document Expiry Date"
+        Description="Set by publisher on up-loading. Defaults to 6 months from date last updated but can be modified"
+	      Type="DateTime"
+	      Group="DIIF"
+	      Required="TRUE">
+  </Field>
+  <!--End of MODDIDocumentBase-->
+
+  <!-- Picture Library 'Extras' -->
+  <Field
+      Type="Text"
+      DisplayName="Picture Caption"
+      Description="Caption to be stored against an image."
+      Required="FALSE"
+      MaxLength="64"
+      Group="DIIF"
+      ID="{4ba53231-01ea-4604-bad9-be73243e051a}"
+      StaticName="Picture_x0020_Caption"
+      Name="Picture_x0020_Caption">
+  </Field>
+  <Field
+      Type="Text"
+      DisplayName="Picture Copyright"
+      Description="Copyright to be stored against image."
+      Required="FALSE"
+      MaxLength="255" Group="DIIF"
+      ID="{e402d40a-054d-4ab6-acb3-af449a1d00c2}"
+      StaticName="Picture_x0020_Copyright"
+      Name="Picture_x0020_Copyright">
+  </Field>
+
+  <Field
+       Type="Text"
+       DisplayName="Alternate Text"
+       Description="Alternate text for annotation of images."
+       Required="FALSE"
+       MaxLength="255" Group="DIIF"
+       ID="{9EFE44E6-7BA0-4324-AC1F-757922665293}"
+       StaticName="AltText"
+       Name="AltText">
+  </Field>
+  <Field
+      Type="DateTime"
+      DisplayName="Expiry Date"
+      Required="FALSE"
+      Format="DateOnly"
+      Group="DIIF"
+      ID="{9e930cb0-58fd-4862-a7e0-396c214cd4ed}"
+      StaticName="Expiry_x0020_Date"
+      Name="Expiry_x0020_Date"
+      CalType="0">
+  </Field>
+  <Field
+      Type="DateTime"
+      DisplayName="Scheduled Date"
+      Required="FALSE"
+      Format="DateOnly"
+      Group="DIIF"
+      ID="{0787dcb1-3f66-49d6-bff2-57278804d812}"
+      StaticName="Scheduled_x0020_Date"
+      Name="Scheduled_x0020_Date">
+    <Default>[today]</Default>
+  </Field>
+  <Field
+    Type="Lookup"
+    DisplayName="NewsSubject"
+    Required="FALSE"
+    List="Lists/News Subjects"
+    ShowField="Title"
+    UnlimitedLengthInDocumentLibrary="FALSE"
+    Group="DIIF"
+    ID="{5f0128ac-eb11-4cec-8040-40cd128fbacb}"
+    StaticName="NewsSubject"
+    Name="NewsSubject">
+  </Field>
+  <Field
+    Type="Lookup"
+    DisplayName="NewsTheme"
+    Required="FALSE"
+    List="Lists/News Themes"
+    ShowField="Title"
+    UnlimitedLengthInDocumentLibrary="FALSE"
+    Group="DIIF"
+    ID="{e84c7240-1b67-43db-8254-104f0c843c8c}"
+    StaticName="NewsTheme"
+    Name="NewsTheme">
+  </Field>
+  
+<!-- Top Right Hand Side Links - Help - About - Contact -->
+  <Field
+       Type="Text"
+       DisplayName="Help Link Url"
+       Description="Help Link Url for Site Information List. Provides configurable Url for Top Right Links"
+       Required="TRUE"
+       MaxLength="255"
+       Group="DIIF"
+       ID="{B3F32C36-5CB7-4415-A856-2B633729465A}"
+       StaticName="HelpUrl"
+       Name="HelpUrl">
+  </Field>
+  <Field
+     Type="Text"
+     DisplayName="Contact Link Url"
+     Description="Contact Link Url for Site Information List. Provides configurable Url for Top Right Links"
+     Required="TRUE"
+     MaxLength="255"
+     Group="DIIF"
+     ID="{6945A39F-F70F-4d7f-B549-14BDDEFF5BDF}"
+     StaticName="ContactUrl"
+     Name="ContactUrl">
+  </Field>
+  <Field
+       Type="Text"
+       DisplayName="About Link Url"
+       Description="About Link Url for Site Information List. Provides configurable Url for Top Right Links"
+       Required="TRUE"
+       MaxLength="255"
+       Group="DIIF"
+       ID="{8BB13D6F-BA8D-49d4-AB8A-E5D36B9DCCCD}"
+       StaticName="AboutUrl"
+       Name="AboutUrl">
+  </Field>
+
+</Elements>
