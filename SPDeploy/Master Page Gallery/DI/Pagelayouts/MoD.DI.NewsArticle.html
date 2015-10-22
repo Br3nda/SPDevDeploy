@@ -9,8 +9,7 @@ To build the page layout directly from this HTML file, simply fill in the conten
 <!-- _LocalBinding -->
 <!DOCTYPE html[]>
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-    <head>
-        <link href="Site.css" type="text/css" rel="stylesheet" />
+    <head>        
         <!--MS:<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">-->
             <!--SPM:<SharePoint:ProjectProperty Property="Title" runat="server"/>-->
             <!--CS: Start Page Field: Title Snippet-->
@@ -22,7 +21,7 @@ To build the page layout directly from this HTML file, simply fill in the conten
         <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/Themable/corev15.css" rel="stylesheet" type="text/css" />
         <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/OLD/Themable/layouts.css" rel="stylesheet" type="text/css" />
         <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/Themable/searchv15.css" rel="stylesheet" type="text/css" />
-        <link href="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Site.css" rel="stylesheet" type="text/css" />
+        <link href="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Site.css" rel="stylesheet" type="text/css" />                
         <link href="https://codedocs.sharepoint.com/_vti_bin/spsdisco.aspx" rel="alternate" type="text/xml" />
         <!--MS:<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">-->
             <!--CS: Start Edit Mode Panel Snippet-->
@@ -33,6 +32,11 @@ To build the page layout directly from this HTML file, simply fill in the conten
                 <!--ME:</SharePoint:CssRegistration>-->
             <!--ME:</Publishing:EditModePanel>-->
             <!--CE: End Edit Mode Panel Snippet-->
+
+            <!--****The below is just so we can like this page****-->
+            <!--SPM:<SharePoint:ScriptLink language="javascript" name="reputation.js" OnDemand="true" runat="server" Localizable="false"/>-->
+            <!--SPM:<SharePoint:ScriptLink language="javascript" ID="MODCSLink4" Name="~sitecollection/_catalogs/masterpage/DI/JS/LikeButton.js" runat="server"/>-->
+        
         <!--ME:</asp:ContentPlaceHolder>-->
         <!--MS:<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">-->
         <!--ME:</asp:ContentPlaceHolder>-->
@@ -58,7 +62,8 @@ To build the page layout directly from this HTML file, simply fill in the conten
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
         <title>MoD.DI.NewsArticle
-        </title>
+        </title>       
+           
     </head>
     <body>
         
@@ -412,6 +417,9 @@ To build the page layout directly from this HTML file, simply fill in the conten
                         <!--ME:</PageFieldDateTimeField:DateTimeField>-->
                         <!--CE: End Page Field: Article Date Snippet-->
                     </div>
+                    <div>
+                        <span>&nbsp;|&nbsp;<a href="javascript:void(0);" onclick="LikePage();return false">Like</a> </span>
+                    </div>
                 </div>
                 <div id="BottomMiddleRightDiv">
                     
@@ -442,5 +450,7 @@ To build the page layout directly from this HTML file, simply fill in the conten
         <!--ME:</asp:ContentPlaceHolder>-->
         <!--MS:<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">-->
         <!--ME:</asp:ContentPlaceHolder>-->
+        
     </body>
+
 </html>

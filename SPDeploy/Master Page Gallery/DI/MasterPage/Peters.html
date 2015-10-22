@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><!--SPG:
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--SPG:
 
 This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
 
@@ -9,223 +10,251 @@ To build the master page directly from this HTML file, simply edit the page as y
 <!-- _LocalBinding -->
 <!DOCTYPE html[]>
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=10" />
-        <!--CS: Start Head Snippet-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <!--CS: Start Head Snippet-->
+    <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+    <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+    <!--SID:00 -->
+    <meta name="GENERATOR" content="Microsoft SharePoint" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Expires" content="0" />
+    <!--SPM:<SharePoint:RobotsMetaTag runat="server"/>-->
+    <!--MS:<SharePoint:PageTitle runat="server">-->
+    <!--SPM:<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">-->
+    <!--SPM:<SharePoint:ProjectProperty Property="Title" runat="server"/>-->
+    <!--SPM:</asp:ContentPlaceHolder>-->
+    <!--ME:</SharePoint:PageTitle>-->
+    <!--SPM:<SharePoint:StartScript runat="server"/>-->
+    <!--MS:<SharePoint:CssLink runat="server" Version="15">-->
+    <!--PS: Start Preview-->
+    <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/Themable/corev15.css" rel="stylesheet" type="text/css" />
+    <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/OLD/Themable/layouts.css" rel="stylesheet" type="text/css" />
+    <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/Themable/searchv15.css" rel="stylesheet" type="text/css" /><!--PE: End Preview-->
+    <!--ME:</SharePoint:CssLink>-->
+    <!--SPM:<SharePoint:CacheManifestLink runat="server"/>-->
+    <!--SPM:<SharePoint:PageRenderMode runat="server" RenderModeType="Standard"/>-->
+    <!--SPM:<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false"/>-->
+    <!--SPM:<SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false"/>-->
+    <!--SPM:<SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false"/>-->
+    <!--SPM:<SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false"/>-->
+    <!--SPM:<SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false"/>-->
+    <!--***MODDI Customisations Start-->
+    <link href="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Site.css" rel="stylesheet" type="text/css" />
+    <!--SPM:<SharePoint:ScriptLink language="javascript" ID="MODCSLink1" Name="~sitecollection/_catalogs/masterpage/DI/JS/jquery-1.11.3.min.js" runat="server"/>-->
+    <!--SPM:<SharePoint:ScriptLink language="javascript" ID="MODCSLink2" Name="~sitecollection/_catalogs/masterpage/DI/JS/App.js" runat="server"/>-->
+    <!--CS: Start Edit Mode Panel Snippet-->
+    <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+    <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+    <!--MS:<Publishing:EditModePanel runat="server" id="editmodestyles">-->
+    <link href="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/SiteInEditMode.css" rel="stylesheet" type="text/css" />
+    <!--ME:</Publishing:EditModePanel>-->
+    <!--CE: End Edit Mode Panel Snippet-->
+    <!--***MODDI Customisations End-->
+    <!--SPM:<SharePoint:CustomJSUrl runat="server"/>-->
+    <!--MS:<SharePoint:SoapDiscoveryLink runat="server">-->
+    <!--PS: Start Preview-->
+    <link href="https://codedocs.sharepoint.com/_vti_bin/spsdisco.aspx" rel="alternate" type="text/xml" /><!--PE: End Preview-->
+    <!--ME:</SharePoint:SoapDiscoveryLink>-->
+    <!--MS:<SharePoint:AjaxDelta id="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">-->
+    <!--MS:<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">-->
+    <!--ME:</asp:ContentPlaceHolder>-->
+    <!--MS:<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true">-->
+    <!--ME:</SharePoint:DelegateControl>-->
+    <!--MS:<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">-->
+    <!--ME:</asp:ContentPlaceHolder>-->
+    <!--ME:</SharePoint:AjaxDelta>-->
+    <!--SPM:<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server"/>-->
+    <!--SPM:<SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">-->
+    <!--SPM:<WebPartPages:SPWebPartManager runat="server"/>-->
+    <!--SPM:</SharePoint:AjaxDelta>-->
+    <!--CE: End Head Snippet-->
+    <!--[if gte mso 9]><xml>
+    <mso:CustomDocumentProperties>
+
+    <mso:ContentType msdt:dt="string">Design File</mso:ContentType>
+    <mso:ContentTypeId msdt:dt="string">0x0101000F1C8B9E0EB4BE489F09807B2C53288F0054AD6EF48B9F7B45A142F8173F171BD10003D357F861E29844953D5CAA1D4D8A3A</mso:ContentTypeId>
+    <mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+    <mso:HtmlDesignFromMaster msdt:dt="string">https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Peters.html, https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Peters.html</mso:HtmlDesignFromMaster>
+    <mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+    <mso:HtmlDesignStatusAndPreview msdt:dt="string">https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Peters.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+    <mso:DefaultCssFile msdt:dt="string"></mso:DefaultCssFile>
+    <mso:PublishingPreviewImage msdt:dt="string"></mso:PublishingPreviewImage>
+    <mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+    <mso:MasterPageDescription msdt:dt="string">A master page</mso:MasterPageDescription>
+    <mso:UIVersion msdt:dt="string">;#15;#</mso:UIVersion>
+    <mso:PublishingHidden msdt:dt="string">0</mso:PublishingHidden>
+    </mso:CustomDocumentProperties>
+    </xml><![endif]-->
+    <!--DC:Peters MasterPage-->
+    <!--DC:Peters MasterPage-->
+    <!--DC:Peters MasterPage-->
+</head>
+<body>
+    <div id="ms-designer-ribbon">
         <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-        <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-        <!--SID:00 -->
-        <meta name="GENERATOR" content="Microsoft SharePoint" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="Expires" content="0" />
-        <!--SPM:<SharePoint:RobotsMetaTag runat="server"/>-->
-        <!--MS:<SharePoint:PageTitle runat="server">-->
-            <!--SPM:<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">-->
-            <!--SPM:<SharePoint:ProjectProperty Property="Title" runat="server"/>-->
-            <!--SPM:</asp:ContentPlaceHolder>-->
-        <!--ME:</SharePoint:PageTitle>-->
-        <!--SPM:<SharePoint:StartScript runat="server"/>-->
-        <!--MS:<SharePoint:CssLink runat="server" Version="15">-->
-            <!--PS: Start Preview-->
-            <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/Themable/corev15.css" rel="stylesheet" type="text/css" />
-            <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/OLD/Themable/layouts.css" rel="stylesheet" type="text/css" />
-            <link href="https://codedocs.sharepoint.com/_layouts/15/1033/styles/Themable/searchv15.css" rel="stylesheet" type="text/css" />
-        <!--PE: End Preview-->
-            
-        <!--ME:</SharePoint:CssLink>-->
-        <!--SPM:<SharePoint:CacheManifestLink runat="server"/>-->
-        <!--SPM:<SharePoint:PageRenderMode runat="server" RenderModeType="Standard"/>-->
-        <!--SPM:<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false"/>-->
-        <!--SPM:<SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false"/>-->
-        <!--SPM:<SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false"/>-->
-        <!--SPM:<SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false"/>-->
-        <!--SPM:<SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false"/>-->
-        
-        <!--***MODDI Customisations Start-->
-        <link href="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Site.css" rel="stylesheet" type="text/css" />
-
-        <!--SPM:<SharePoint:ScriptLink language="javascript" ID="MODCSLink1" Name="~sitecollection/_catalogs/masterpage/DI/JS/jquery-1.11.3.min.js" runat="server"/>-->        
-        <!--SPM:<SharePoint:ScriptLink language="javascript" ID="MODCSLink2" Name="~sitecollection/_catalogs/masterpage/DI/JS/App.js" runat="server"/>-->
-        
-        <!--CS: Start Edit Mode Panel Snippet-->
-        <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-        <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-        <!--MS:<Publishing:EditModePanel runat="server" id="editmodestyles">-->
-        <link href="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/SiteInEditMode.css" rel="stylesheet" type="text/css" />
-        <!--ME:</Publishing:EditModePanel>-->
-        <!--CE: End Edit Mode Panel Snippet-->
-        <!--***MODDI Customisations End-->
-        
-        <!--SPM:<SharePoint:CustomJSUrl runat="server"/>-->        
-        <!--MS:<SharePoint:SoapDiscoveryLink runat="server">-->
-            <!--PS: Start Preview--><link href="https://codedocs.sharepoint.com/_vti_bin/spsdisco.aspx" rel="alternate" type="text/xml" /><!--PE: End Preview-->
-        <!--ME:</SharePoint:SoapDiscoveryLink>-->
-        <!--MS:<SharePoint:AjaxDelta id="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">-->
-            <!--MS:<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">-->
-            <!--ME:</asp:ContentPlaceHolder>-->
-            <!--MS:<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true">-->
-            <!--ME:</SharePoint:DelegateControl>-->
-            <!--MS:<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">-->
-            <!--ME:</asp:ContentPlaceHolder>-->
-        <!--ME:</SharePoint:AjaxDelta>-->
-        <!--SPM:<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server"/>-->
-        <!--SPM:<SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">-->
-        <!--SPM:<WebPartPages:SPWebPartManager runat="server"/>-->
-        <!--SPM:</SharePoint:AjaxDelta>-->
-        <!--CE: End Head Snippet-->
-        <!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-
-<mso:ContentType msdt:dt="string">Design File</mso:ContentType>
-<mso:ContentTypeId msdt:dt="string">0x0101000F1C8B9E0EB4BE489F09807B2C53288F0054AD6EF48B9F7B45A142F8173F171BD10003D357F861E29844953D5CAA1D4D8A3A</mso:ContentTypeId>
-<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
-<mso:HtmlDesignFromMaster msdt:dt="string"></mso:HtmlDesignFromMaster>
-<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
-<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Peters.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
-<mso:DefaultCssFile msdt:dt="string"></mso:DefaultCssFile>
-<mso:PublishingPreviewImage msdt:dt="string"></mso:PublishingPreviewImage>
-<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
-<mso:MasterPageDescription msdt:dt="string">A master page</mso:MasterPageDescription>
-<mso:UIVersion msdt:dt="string">;#15;#</mso:UIVersion>
-<mso:PublishingHidden msdt:dt="string">0</mso:PublishingHidden>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
-        <!--DC:Peters MasterPage-->
-        <!--DC:Peters MasterPage-->
-    </head>
-    <body>         
-        <div id="ms-designer-ribbon">
-            <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-            <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
-                <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
-                    <!--MS:<SharePoint:EncodedLiteral runat="server" text="&#60;%$Resources:wss,master_turnonaccessibility%&#62;" EncodeMethod="HtmlEncode">-->
-                    <!--ME:</SharePoint:EncodedLiteral>-->
-                </a>
-            </div>
-            <div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex">
-                <a id="linkTurnOffAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
-                    <!--MS:<SharePoint:EncodedLiteral runat="server" text="&#60;%$Resources:wss,master_turnoffaccessibility%&#62;" EncodeMethod="HtmlEncode">-->
-                    <!--ME:</SharePoint:EncodedLiteral>-->
-                </a>
-            </div>
-            <!--SID:02 {Ribbon Snippet}-->
-            <!--PS: Start Preview--><div class="DefaultContentBlock" style="background:rgb(0, 114, 198); color:white; width:100%; padding:8px; height:64px; overflow:hidden;">In true previews of your site, the SharePoint ribbon will be here.</div><!--PE: End Preview-->
+        <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
+            <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
+                <!--MS:<SharePoint:EncodedLiteral runat="server" text="&#60;%$Resources:wss,master_turnonaccessibility%&#62;" EncodeMethod="HtmlEncode">-->
+                <!--ME:</SharePoint:EncodedLiteral>-->
+            </a>
         </div>
-        <!--MS:<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">-->
-            <!--SPM:<wssucw:Welcome runat="server" EnableViewState="false"/>-->
-        <!--ME:</SharePoint:SPSecurityTrimmedControl>-->
-        <div id="s4-workspace">
-            <div id="s4-bodyContainer">
-                <div id="mod_container">
-                    <div id="banner">
-                        <div class="bordered" id="banner_middle">
-                            <div id="image_container">
-                                <img src="mod.gif" alt="MoD logo" />
-                            </div>
-                            <div id="homelink">
-                                <span>
-                                    <a href="#">Defence Intranet Home
-                                    </a>
-                                </span>
-                            </div>
-                            <div id="AboutLinks">
-                                <span>About
-                                </span>
-                                <span>Help
-                                </span>
-                                <span>Directory
-                                </span>
-                                <span>Feedback
-                                </span>
-                            </div>
-                            <div id="search_container" class="ms-mpSearchBox ms-floatRight">
-						        <!--CS: Start Search Box Snippet-->
-						        <!--SPM:<%@Register Tagprefix="SharePoint"  Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>-->
-						        <!--SPM:<%@Register Tagprefix="WebPartPages"  Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>-->
-						        <!--SPM:<%@Register Tagprefix="PWA"  Namespace="Microsoft.Office.Project.PWA.CommonControls" Assembly="Microsoft.Office.Project.Server.PWA, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>-->
-						        <!--SPM:<%@Register Tagprefix="spsswc"  Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>-->
-						        <!--SPM:<%@Register Tagprefix="iws"  Namespace="Microsoft.SharePoint.Spx.WebSite.Controls" Assembly="Microsoft.SharePoint.Spx.WebSite.ApplicationPages, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>-->
-						        <!--SPM:<%@Register Tagprefix="Shared"  Namespace="Microsoft.SharePoint.Spx.WebsiteCore.Controls" Assembly="Microsoft.SharePoint.Spx.WebsiteCore, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>-->
-						        <!--SPM:<%@Register Tagprefix="microsoftonline"  Namespace="Microsoft.Online.SharePoint.WebControls" Assembly="Microsoft.Online.SharePoint.PrivacyLinkControl, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>-->
-						        <!--SPM:<%@Register Tagprefix="af25e94ec"  Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>-->
-						        <!--MS:<spsswc:SearchBoxScriptWebPart runat="server" QueryGroupNamesJson="[&quot;Default&quot;]" ResultsPageAddress="~site/_layouts/15/osssearchresults.aspx?u={contexturl}" UpdatePageTitle="False" TryInplaceQuery="False" FurtherSharedSearchBoxSettingsCheckNeeded="False" RenderTemplateId="~sitecollection/_catalogs/masterpage/Display Templates/Search/Control_SearchBox_Compact.js" StatesJson="{}" ServerIncludeScriptsJson="null" Title="&lt;%$Resources:Microsoft.Office.Server.Search,SearchBoxScriptWP_Title;%&gt;" FrameType="None" SuppressWebPartChrome="False" Description="&lt;%$Resources:Microsoft.Office.Server.Search,SearchBoxScriptWP_Desc;%&gt;" IsIncluded="True" ZoneID="ImportedPartZone" PartOrder="0" FrameState="Normal" AllowRemove="True" AllowZoneChange="True" AllowMinimize="True" AllowConnect="True" AllowEdit="True" AllowHide="True" IsVisible="True" DetailLink="" HelpLink="" HelpMode="Modeless" Dir="Default" PartImageSmall="" MissingAssembly="&lt;%$Resources:core,ImportErrorMessage;%&gt;" ImportErrorMessage="&lt;%$Resources:core,ImportErrorMessage;%&gt;" PartImageLarge="" IsIncludedFilter="" ExportControlledProperties="True" ConnectionID="00000000-0000-0000-0000-000000000000" ID="g_eadab302_18e8_4548_86d7_37b3c7d271fd" ChromeType="None" ExportMode="All" Preview="&lt;div class=&quot;ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth &quot;&gt;  &lt;div WebPartID=&quot;00000000-0000-0000-0000-000000000000&quot; HasPers=&quot;true&quot; id=&quot;WebPartwpz0_g_eadab302_18e8_4548_86d7_37b3c7d271fd&quot; width=&quot;100%&quot; class=&quot;ms-WPBody noindex &quot; OnlyForMePart=&quot;true&quot; allowDelete=&quot;false&quot; style=&quot;&quot; &gt;&lt;div id=&quot;WebPartContent&quot;&gt;   &lt;div componentid=&quot;wpz0_g_eadab302_18e8_4548_86d7_37b3c7d271fd_csr&quot; id=&quot;wpz0_g_eadab302_18e8_4548_86d7_37b3c7d271fd_csr&quot;&gt;&lt;/div&gt;&lt;noscript&gt;&lt;div id=&quot;wpz0_g_eadab302_18e8_4548_86d7_37b3c7d271fd_noscript&quot;&gt;It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.&lt;/div&gt;&lt;/noscript&gt;&lt;div id=&quot;wpz0_g_eadab302_18e8_4548_86d7_37b3c7d271fd&quot;&gt;  &lt;/div&gt;  &lt;/div&gt;&lt;div class=&quot;ms-clear&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;/div&gt;" __MarkupType="vsattributemarkup" __WebPartId="{eadab302-18e8-4548-86d7-37b3c7d271fd}" WebPart="true" Height="" Width="">-->
-						        <!--ME:</spsswc:SearchBoxScriptWebPart>--><!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
-								<div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
-								<div class="ms-WPBody noindex " id="WebPartWPQ1" allowdelete="false" onlyformepart="true" width="100%" haspers="true" webpartid="00000000-0000-0000-0000-000000000000">
-								<div id="ctl00_ctl00_PlaceHolderMain_ComponentMain_ComponentPropertyGrids_g_eadab302_18e8_4548_86d7_37b3c7d271fd_csr" componentid="ctl00_ctl00_PlaceHolderMain_ComponentMain_ComponentPropertyGrids_g_eadab302_18e8_4548_86d7_37b3c7d271fd_csr"></div>
-								<noscript>&lt;div id="ctl00_ctl00_PlaceHolderMain_ComponentMain_ComponentPropertyGrids_g_eadab302_18e8_4548_86d7_37b3c7d271fd_noscript"&gt;It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.&lt;/div&gt;</noscript>
-								<div id="ctl00_ctl00_PlaceHolderMain_ComponentMain_ComponentPropertyGrids_g_eadab302_18e8_4548_86d7_37b3c7d271fd">
-								</div>
-								<div class="ms-clear"></div>
-								</div>
-							    </div>
-                                <!--PE: End of READ-ONLY PREVIEW-->
+        <div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex">
+            <a id="linkTurnOffAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+                <!--MS:<SharePoint:EncodedLiteral runat="server" text="&#60;%$Resources:wss,master_turnoffaccessibility%&#62;" EncodeMethod="HtmlEncode">-->
+                <!--ME:</SharePoint:EncodedLiteral>-->
+            </a>
+        </div>
+        <!--SID:02 {Ribbon Snippet}-->
+        <!--PS: Start Preview--><div class="DefaultContentBlock" style="background:rgb(0, 114, 198); color:white; width:100%; padding:8px; height:64px; overflow:hidden;">In true previews of your site, the SharePoint ribbon will be here.</div><!--PE: End Preview-->
+    </div>
+    <!--MS:<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">-->
+    <!--SPM:<wssucw:Welcome runat="server" EnableViewState="false"/>-->
+    <!--ME:</SharePoint:SPSecurityTrimmedControl>-->
+    <div id="s4-workspace">
+        <div id="s4-bodyContainer">
+            <div id="mod_container">
+                <div id="banner">
+                    <div class="bordered" id="banner_middle">
+                        <div id="search_container" class="ms-mpSearchBox ms-floatRight">
+                            <div data-name="SearchBox">
+                                <!--CS: Start Search Box Snippet-->
+                                <!--SPM:<%@Register Tagprefix="SearchWC" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                <!--MS:<SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" runat="server" CssClass="mod_search_box" EmitStyleReference="False" ServerInitialRender="True" ShowQuerySuggestions="True" TryInplaceQuery="False" UseSharedSettings="True" PartImageSmall="/sites/intranet/masterpage/di/search-button.png" ChromeType="None">-->
+                                <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><div class="ms-webpart-chrome ms-webpart-chrome-fullWidth "><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPart" width="100%" class="ms-WPBody noindex " OnlyForMePart="true" allowDelete="false" style=""><div componentid="ctl00_ctl03_csr" id="ctl00_ctl03_csr"><div id="SearchBox" name="Control"><div class="ms-srch-sb ms-srch-sb-border" id="ctl00_ctl03_csr_sboxdiv"><input type="text" value="Search..." maxlength="2048" accessKey="S" title="Search..." id="ctl00_ctl03_csr_sbox" autocomplete="off" autocorrect="off" onkeypress="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {if (Srch.U.isEnterKey(String.fromCharCode(event.keyCode))) {$find('ctl00_ctl03_csr').search($get('ctl00_ctl03_csr_sbox').value);return Srch.U.cancelEvent(event);}})" onkeydown="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {var ctl = $find('ctl00_ctl03_csr');ctl.activateDefaultQuerySuggestionBehavior();})" onfocus="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {var ctl = $find('ctl00_ctl03_csr');ctl.hidePrompt();ctl.setBorder(true);})" onblur="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {var ctl = $find('ctl00_ctl03_csr'); if (ctl){ ctl.showPrompt(); ctl.setBorder(false);}})" class="ms-textSmall ms-srch-sb-prompt ms-helperText" /><a title="Search" role="button" class="ms-srch-sb-searchLink" id="ctl00_ctl03_csr_SearchLink" onclick="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {$find('ctl00_ctl03_csr').search($get('ctl00_ctl03_csr_sbox').value);})" href="javascript: {}"><img src="https://codedocs.sharepoint.com/_layouts/15/images/searchresultui.png?rev=40" class="ms-srch-sb-searchImg" id="searchImg" alt="Search" /></a></div></div></div><noscript><div id="ctl00_ctl03_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_ctl03" class="mod_search_box"></div><div class="ms-clear"></div></div></div><!--PE: End of READ-ONLY PREVIEW-->
+                                <!--ME:</SearchWC:SearchBoxScriptWebPart>-->
                                 <!--CE: End Search Box Snippet-->
-							</div><!--search_container-->
-                        </div>
-                        <div id="menu_bar">
-                            <div>
-                                <span>
-                                    <a href="https://codedocs.sharepoint.com/sites/intranet/">Home
-                                    </a>
-                                </span>
-                                <span>Policy and Guidance
-                                </span>
-                                <span>Reference
-                                </span>
-                                <span>Operations
-                                </span>
-                                <span>
-                                    <a href="https://codedocs.sharepoint.com/sites/intranet/News">News
-                                    </a>
-                                </span>
-                                <span>Organisations and Locations
-                                </span>
-                                <span>Personal
-                                </span>
-                                <span>Community
-                                </span>
-                                <span>Tools
-                                </span>
                             </div>
-                        </div> <!--menu_bar-->
+                        </div>
+                        <!--search_container-->
                     </div>
-                    <div id="main_content" class="Centred">
-                        <!--CS: Start PlaceHolderMain Snippet-->
-                        <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                        <!--MS:<SharePoint:AjaxDelta id="DeltaPlaceHolderMain" IsMainContent="true" runat="server">-->
-                            <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
-                                <div class="DefaultContentBlock" style="border:medium black solid; background:yellow; color:black;">
-					                This area will be filled in by content you create in your page layouts.
-                                </div>
-                            <!--ME:</asp:ContentPlaceHolder>-->
-                        <!--ME:</SharePoint:AjaxDelta>-->
-                        <!--CE: End PlaceHolderMain Snippet-->
-                    </div><!-- main_content -->
-                    <div id="Footer">
-                        <div id="Footer_Left">
-                            <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/MODLogoSmall.png" alt="MOD Logo" />
-                        </div>
-                        <div id="Footer_Middle">
-                            <div id="Footer_Middle_Top">
-                             <a href="#">Accessibility Statement</a> | <a href="#">Links Policy</a> | <a href="#">Conditions of Use</a>
-                            </div>
-                            <div id="Footer_Middle_Bottom">
-                                <a href="#"><img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/PrintIcon.png" alt="Print Page" />Print this page</a> |
-                                <a href="#"><img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/FavouritesIcon.png" alt="Add to favourites" />Add to favourites</a> |
-                                <a href="#"><img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/SendIcon.png" alt="Send to a friend" />Send to a friend</a>
-                            </div>
-                        </div>
-                        <div id="Footer_Right">
+                    <div id="menu_bar">
+                        <div>
+                            <span>
+                                <a href="https://codedocs.sharepoint.com/sites/intranet/">
+                                    Home
 
+
+                                </a>
+                            </span>
+                            <span>
+                                Policy and Guidance
+
+
+                            </span>
+                            <span>
+                                Reference
+
+
+                            </span>
+                            <span>
+                                Operations
+
+
+                            </span>
+                            <span>
+                                <a href="https://codedocs.sharepoint.com/sites/intranet/News">
+                                    News
+
+
+                                </a>
+                            </span>
+                            <span>
+                                Organisations and Locations
+
+
+                            </span>
+                            <span>
+                                Personal
+
+
+                            </span>
+                            <span>
+                                Community
+
+
+                            </span>
+                            <span>
+                                Tools
+
+
+                            </span>
                         </div>
-                    </div>                    
-                </div><!--mod_container -->
-                
+                    </div>
+                    <!--menu_bar-->
+                    <div id="global-header-bar">
+                    </div>
+                    <div id="image_container">
+                        <img src="mod.gif" alt="MoD logo" />
+                    </div>
+                </div>
+                <div id="main_content" class="Centred">
+                    <!--CS: Start PlaceHolderMain Snippet-->
+                    <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                    <!--MS:<SharePoint:AjaxDelta id="DeltaPlaceHolderMain" IsMainContent="true" runat="server">-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
+                    <div class="DefaultContentBlock" style="border:medium black solid; background:yellow; color:black;">
+                        This area will be filled in by content you create in your page layouts.
+
+
+                    </div>
+                    <!--ME:</asp:ContentPlaceHolder>-->
+                    <!--ME:</SharePoint:AjaxDelta>-->
+                    <!--CE: End PlaceHolderMain Snippet-->
+                </div>
+                <!-- main_content -->
+                <div id="Footer">
+                    <div id="Footer_Left">
+                        <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/MODLogoSmall.png" alt="MOD Logo" />
+                    </div>
+                    <div id="Footer_Middle">
+                        <div id="Footer_Middle_Top">
+                            <a href="#">
+                                Accessibility Statement
+
+                            </a>
+
+                            |                                                                 <a href="#">
+                                Links Policy
+
+                            </a>
+
+                            |                                                                 <a href="#">
+                                Conditions of Use
+
+                            </a>
+                        </div>
+                        <div id="Footer_Middle_Bottom">
+                            <a href="#">
+                                <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/PrintIcon.png" alt="Print Page" />
+
+                                Print this page
+                            </a>
+
+                            |
+                            <a href="#">
+                                <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/FavouritesIcon.png" alt="Add to favourites" />
+
+                                Add to favourites
+                            </a>
+
+                            |
+                            <a href="#">
+                                <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/SendIcon.png" alt="Send to a friend" />
+
+                                Send to a friend
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Footer_Right">
+                    </div>
+                </div>
             </div>
+            <!--mod_container -->
         </div>
-        <div id="navBarContainer">
-            <!--SPM:<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server"/>-->
-        </div>
-    </body>
+    </div>
+    <div id="navBarContainer">
+        <!--SPM:<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server"/>-->
+    </div>
+</body>
 </html>
