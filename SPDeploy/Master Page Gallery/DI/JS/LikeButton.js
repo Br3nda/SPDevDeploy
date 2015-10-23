@@ -2,15 +2,12 @@
 $(document).ready(function () {
     $('#image_container').hide();
 
-    SP.SOD.loadMultiple(['sp.js', 'reputation.js'], doWork);
-
-    //Determine whether this user has already like the page or not and provide the right anchor text
-    if (IsLiked() == true)
-        $('#LikeLink').text('Unlike');
-
+    SP.SOD.loadMultiple(['sp.js', 'reputation.js'], IsLiked);
+    
 });
 
 function IsLiked() {
+    alert('In IsLiked');
     var likesCount = 0;
     var Liked = false;
     var context = new SP.ClientContext.get_current();
@@ -23,50 +20,71 @@ function IsLiked() {
     context.load(item, "LikedBy", "ID", "LikesCount");
     context.executeQueryAsync(Function.createDelegate(this, function (success) {
         var LikedBy = item.get_item('LikedBy');
+        console.log(LikedBy);
         if (!SP.ScriptHelpers.isNullOrUndefined(LikedBy)) {
             for (var $v_1 = 0, $v_2 = LikedBy.length; $v_1 < $v_2; $v_1++) {
-                var $v_3 = LikedBy[$v_1];
-                if ($v_3.$1E_1 === _spPageContextInfo.userId) {
+                var $v_3 = LikedBy[$v_1];                
+                if ($v_3.$5_2 === _spPageContextInfo.userLoginName) {
+                    alert('Matched');
                     Liked = true;
                     likesCount = item.get_item('LikesCount');
                 }
             }
         }
-    }));
+        alert('Liked=' + Liked);
+        alert('likesCount=' + likesCount);
+        //store values in hidden elements
+        $('#Liked').val(Liked);
+        alert('HiddenLike=' + $('#Liked').val());
+        $('#LikedCount').val(likesCount);
+        alert('HiddenLikedCount=' + $('#LikedCount').val());
 
-    //store values in hidden elements
-    $('#Liked') = Liked;
-    $('LikedCount') = likesCount;
+        //Determine whether this user has already like the page or not and provide the right anchor text
+        if (Liked == true) {
+            alert('true');
+            $('#LikeLink').text('Unlike');
+        }
+        else {
+            $('#LikeLink').text('Like');
+            alert('false');
+        }
+    }, function (failure) { alert('Failed to get info');}));
 
-    return Liked;
+    
+    
 }
 
 //This function called by the Like hyperlink
-function LikePage() {        
-    //SP.SOD.executeFunc('sp.js', 'SP.ClientContext', doWork);
+function LikePage() {
+    alert('In LikePage');
+    
     SP.SOD.loadMultiple(['sp.js', 'reputation.js'], doWork)
 
-    function doWork() {
-        var likesCount = 0;
-        var Liked = false;
+    function doWork() {        
+        
         var context = new SP.ClientContext.get_current();
         var listID = _spPageContextInfo.pageListId;
         var itemId = _spPageContextInfo.pageItemId;
-        
-        if ($('#Liked') == true) {
+        var lLiked = $('#Liked').val();
+        alert('lLiked=' + lLiked);
+        if ($('#Liked').val()=='true')
+        {
+            alert('Unliking');
             Microsoft.Office.Server.ReputationModel.Reputation.setLike(context, listID, itemId, false);
-            $('#LikeLink').text('like');
-            $('#Liked') = false;
-            $('LikedCount') = parseInt($('LikedCount')) - 1;
+            $('#LikeLink').text('Like');
+            $('#Liked').val(false);
+            $('#LikedCount').val(parseInt($('LikedCount')) - 1);
         }
-        else {
+        else
+        {
+            alert('Liking');
             Microsoft.Office.Server.ReputationModel.Reputation.setLike(context, listID, itemId, true);
             $('#LikeLink').text('Unlike');
-            $('#Liked') = true;
-            $('LikedCount') = $('LikedCount') + 1
+            $('#Liked').val(true);
+            $('#LikedCount').val(parseInt($('LikedCount')) + 1);
         }
 
-        context.executeQueryAsync();
+        context.executeQueryAsync(function () { alert('success') }, function () { alert('failure') });
     }
 
     
