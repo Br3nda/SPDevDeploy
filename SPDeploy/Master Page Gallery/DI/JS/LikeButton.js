@@ -1,43 +1,78 @@
 ﻿//this below is just to hide an image we don't want to see on a page layout
 $(document).ready(function () {
     $('#image_container').hide();
+
+    SP.SOD.loadMultiple(['sp.js', 'reputation.js'], doWork);
+
+    //Determine whether this user has already like the page or not and provide the right anchor text
+    if (IsLiked() == true)
+        $('#LikeLink').text('Unlike');
+
 });
 
-function LikePage() {
-    //SP.SOD - represents an on-demand ECMA script
-    Log("in LikePage");
-    //SP.SOD.executeFunc(key, functionName, fn) - Ensure the file that contains the specified function is loaded then calls the specified callback function fn
-    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', doWork);       
-
-}
-
-function doWork() {
-    alert('In do work');
+function IsLiked() {
+    var likesCount = 0;
+    var Liked = false;
     var context = new SP.ClientContext.get_current();
-    //Note that in a clientWebPart which is a web part that is an IFrame
-    //to a page on a App Web the follwoing is not available
-    alert('ItemID=' + _spPageContextInfo.pageItemId);
-
-    alert("ListId=" + _spPageContextInfo.pageListId);
-
     var listID = _spPageContextInfo.pageListId;
     var itemId = _spPageContextInfo.pageItemId;
 
-    SP.SOD.executeFunc('reputation.js', 'reputation.setLike', setLike);
+    var list = context.get_web().get_lists().getById(listID);
+    var item = list.getItemById(itemId);
 
-    function setLike()
-    {
-        alert('In setLike');
-        try {
-            Microsoft.Office.Server.ReputationModel.Reputation.setLike(context, listID, itemId, true);
-            context.executeQueryAsync(function () { alert('Succeeded'); }, function () { alert('failed'); });
+    context.load(item, "LikedBy", "ID", "LikesCount");
+    context.executeQueryAsync(Function.createDelegate(this, function (success) {
+        var LikedBy = item.get_item('LikedBy');
+        if (!SP.ScriptHelpers.isNullOrUndefined(LikedBy)) {
+            for (var $v_1 = 0, $v_2 = LikedBy.length; $v_1 < $v_2; $v_1++) {
+                var $v_3 = LikedBy[$v_1];
+                if ($v_3.$1E_1 === _spPageContextInfo.userId) {
+                    Liked = true;
+                    likesCount = item.get_item('LikesCount');
+                }
+            }
         }
-        catch (e) {
-            alert("Error:" + e.message);
-        }
-    }
-   
+    }));
+
+    //store values in hidden elements
+    $('#Liked') = Liked;
+    $('LikedCount') = likesCount;
+
+    return Liked;
 }
+
+//This function called by the Like hyperlink
+function LikePage() {        
+    //SP.SOD.executeFunc('sp.js', 'SP.ClientContext', doWork);
+    SP.SOD.loadMultiple(['sp.js', 'reputation.js'], doWork)
+
+    function doWork() {
+        var likesCount = 0;
+        var Liked = false;
+        var context = new SP.ClientContext.get_current();
+        var listID = _spPageContextInfo.pageListId;
+        var itemId = _spPageContextInfo.pageItemId;
+        
+        if ($('#Liked') == true) {
+            Microsoft.Office.Server.ReputationModel.Reputation.setLike(context, listID, itemId, false);
+            $('#LikeLink').text('like');
+            $('#Liked') = false;
+            $('LikedCount') = parseInt($('LikedCount')) - 1;
+        }
+        else {
+            Microsoft.Office.Server.ReputationModel.Reputation.setLike(context, listID, itemId, true);
+            $('#LikeLink').text('Unlike');
+            $('#Liked') = true;
+            $('LikedCount') = $('LikedCount') + 1
+        }
+
+        context.executeQueryAsync();
+    }
+
+    
+}
+
+
 
 
 
