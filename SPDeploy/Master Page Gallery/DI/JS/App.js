@@ -1,4 +1,7 @@
-﻿$(document).ready(function () {
+﻿var MODDIAppJS = MODDIAppJs || {}; //get reference or create anew
+
+//With IIFE anything needed later must be returned
+MODDIAppJS.HideIrrelevantDOM = function () {
     //Hide elements if no image or no quote
     if ($('#Image-Container-Right').find('img').length == 0) {
         $('#TopRightHeaderDiv').hide();
@@ -17,4 +20,8 @@
             $('#Quote-Container-Left').hide();
         }
     }
+};
+
+$(document).ready(function () {
+    MODDIAppJS.HideIrrelevantDOM
 });

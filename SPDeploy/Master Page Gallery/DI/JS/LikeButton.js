@@ -6,6 +6,8 @@ $(document).ready(function () {
 
 
 //Determine if page already liked by this person and display accordingly
+//TODO:Catch if LikedBy and LikesCount are undefined - if they are the library may not be configured
+//for likes and we should not show the Like link
 function IsLiked() {    
     var likesCount = 0;
     var Liked = false;
