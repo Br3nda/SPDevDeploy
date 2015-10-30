@@ -1,13 +1,12 @@
 ﻿//this below is just to hide an image we don't want to see on a page layout
 $(document).ready(function () {
-    $('#image_container').hide();
-
-    SP.SOD.loadMultiple(['sp.js', 'reputation.js'], IsLiked);
-    
+    //Ensure the sp.js file is loaded and then invoke the function 
+    SP.SOD.loadMultiple(['sp.js', 'reputation.js'], IsLiked);    
 });
 
-function IsLiked() {
-    alert('In IsLiked');
+
+//Determine if page already liked by this person and display accordingly
+function IsLiked() {    
     var likesCount = 0;
     var Liked = false;
     var context = new SP.ClientContext.get_current();
@@ -19,57 +18,48 @@ function IsLiked() {
 
     context.load(item, "LikedBy", "ID", "LikesCount");
     context.executeQueryAsync(Function.createDelegate(this, function (success) {
-        var LikedBy = item.get_item('LikedBy');
-        console.log(LikedBy);
+        var LikedBy = item.get_item('LikedBy');        
         if (!SP.ScriptHelpers.isNullOrUndefined(LikedBy)) {
             for (var $v_1 = 0, $v_2 = LikedBy.length; $v_1 < $v_2; $v_1++) {
                 var $v_3 = LikedBy[$v_1];                
-                if ($v_3.$5_2 === _spPageContextInfo.userLoginName) {
-                    alert('Matched');
+                if ($v_3.$5_2 === _spPageContextInfo.userLoginName) {                    
                     Liked = true;
                     likesCount = item.get_item('LikesCount');
                 }
             }
         }
-        alert('Liked=' + Liked);
-        alert('likesCount=' + likesCount);
-        //store values in hidden elements
+
+        //store values in some hidden elements
         $('#Liked').val(Liked);
-        alert('HiddenLike=' + $('#Liked').val());
         $('#LikedCount').val(likesCount);
-        alert('HiddenLikedCount=' + $('#LikedCount').val());
 
         //Determine whether this user has already like the page or not and provide the right anchor text
         if (Liked == true) {
-            alert('true');
             $('#LikeLink').text('Unlike');
         }
         else {
             $('#LikeLink').text('Like');
-            alert('false');
         }
-    }, function (failure) { alert('Failed to get info');}));
+    }, function (failure) { console.log('Failed to load ListItem for Liking.');}));
 
     
     
 }
 
-//This function called by the Like hyperlink
+//This function called by the Like hyperlink on the pagelayout
 function LikePage() {
-    alert('In LikePage');
-    
+    console.log('In LikePage');    
     SP.SOD.loadMultiple(['sp.js', 'reputation.js'], doWork)
 
-    function doWork() {        
-        
+    //Function to actually do the liking or unliking
+    function doWork() {                
         var context = new SP.ClientContext.get_current();
         var listID = _spPageContextInfo.pageListId;
         var itemId = _spPageContextInfo.pageItemId;
         var lLiked = $('#Liked').val();
-        alert('lLiked=' + lLiked);
+
         if ($('#Liked').val()=='true')
-        {
-            alert('Unliking');
+        {            
             Microsoft.Office.Server.ReputationModel.Reputation.setLike(context, listID, itemId, false);
             $('#LikeLink').text('Like');
             $('#Liked').val(false);
@@ -77,14 +67,14 @@ function LikePage() {
         }
         else
         {
-            alert('Liking');
             Microsoft.Office.Server.ReputationModel.Reputation.setLike(context, listID, itemId, true);
             $('#LikeLink').text('Unlike');
             $('#Liked').val(true);
             $('#LikedCount').val(parseInt($('LikedCount')) + 1);
         }
 
-        context.executeQueryAsync(function () { alert('success') }, function () { alert('failure') });
+        //Like or Unlike the page
+        context.executeQueryAsync(function () { }, function () { console.log('Failed to like page.') });
     }
 
     

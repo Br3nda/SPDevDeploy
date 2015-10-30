@@ -62,17 +62,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fields\FieldDefinition.xml" />
+    <Content Include="Fields\FieldDefinition.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Master Page Gallery\DI\CSS\Site.css" />
     <Content Include="Master Page Gallery\DI\CSS\NewsArticle.css" />
     <Content Include="Master Page Gallery\DI\CSS\SiteInEditMode.css" />
     <Content Include="Master Page Gallery\DI\DisplayTemplates\MOD_ControlList.html" />
     <Content Include="Master Page Gallery\DI\DisplayTemplates\MOD_NewsItemSingle.html" />
     <Content Include="Master Page Gallery\DI\DisplayTemplates\MOD_NewsPicture3Lines.html" />
-    <Content Include="Master Page Gallery\DI\Images\likeMe1.png" />
+    <Content Include="Master Page Gallery\DI\Images\FavouritesIcon.png" />
+    <Content Include="Master Page Gallery\DI\Images\leftquote.png" />
+    <Content Include="Master Page Gallery\DI\Images\mod.gif" />
+    <Content Include="Master Page Gallery\DI\Images\MOD.jpg" />
+    <Content Include="Master Page Gallery\DI\Images\MODLogoSmall.png" />
+    <Content Include="Master Page Gallery\DI\Images\PrintIcon.png" />
+    <Content Include="Master Page Gallery\DI\Images\rightquote.png" />
+    <Content Include="Master Page Gallery\DI\Images\SendIcon.png" />
     <Content Include="Master Page Gallery\DI\JS\App.js" />
     <Content Include="Master Page Gallery\DI\JS\LikeButton.js" />
-    <Content Include="Master Page Gallery\DI\MasterPage\Peters.html" />
+    <Content Include="Master Page Gallery\DI\JS\ModalSurvey.js" />
+    <Content Include="Master Page Gallery\DI\MasterPage\MODDI.html" />
     <Content Include="Master Page Gallery\DI\Pagelayouts\MoD.DI.NewsArticle.html" />
   </ItemGroup>
   <ItemGroup>

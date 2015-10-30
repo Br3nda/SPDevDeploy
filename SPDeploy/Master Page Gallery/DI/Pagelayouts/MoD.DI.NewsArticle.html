@@ -75,48 +75,47 @@ To build the page layout directly from this HTML file, simply fill in the conten
             <!--CE: End Page Field: Title Snippet-->
         <!--ME:</asp:ContentPlaceHolder>-->
         <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
-            <div id="NewsStoryDiv">
-                <div id="NewsStory">
-                    <span >News story</span>
-                </div>
-                <div data-name="Page Field: Title" id="NewsArticleTitle">
-                    <!--CS: Start Page Field: Title Snippet-->
-                    <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                    <!--MS:<PageFieldTextField:TextField FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server" DisplaySize="50">-->
-                    <!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
-                    <div align="left" class="ms-formfieldcontainer">
+        <div id="NewsStoryDiv">        
+            <div id="NewsStory">
+                <span>News story</span>
+            </div>
+            <div data-name="Page Field: Title" id="NewsArticleTitle">
+                <!--CS: Start Page Field: Title Snippet-->
+                <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <!--MS:<PageFieldTextField:TextField FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server" DisplaySize="50">-->
+                <!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
+                <div align="left" class="ms-formfieldcontainer">
                     <div class="ms-formfieldlabelcontainer" nowrap="nowrap">
                         <span class="ms-formfieldlabel" nowrap="nowrap">Title</span>
                     </div>
                     <div class="ms-formfieldvaluecontainer">MoD.DI.NewsArticle </div>
+                </div>
+                <!--PE: End of READ-ONLY PREVIEW-->
+                <!--ME:</PageFieldTextField:TextField>-->
+                <!--CE: End Page Field: Title Snippet-->
+            </div>    
+        </div>        
+        <div>                
+            <div data-name="Page Field: Comments" id="NewsSummary">
+                <!--CS: Start Page Field: Comments Snippet-->
+                <!--SPM:<%@Register Tagprefix="PageFieldNoteField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <!--MS:<PageFieldNoteField:NoteField FieldName="9da97a8a-1da5-4a77-98d3-4bc10456e700" runat="server">-->
+                <!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
+                <div align="left" class="ms-formfieldcontainer">
+                    <div class="ms-formfieldlabelcontainer" nowrap="nowrap">
+                        <span class="ms-formfieldlabel" nowrap="nowrap">Description</span>
                     </div>
-                    <!--PE: End of READ-ONLY PREVIEW-->
-                    <!--ME:</PageFieldTextField:TextField>-->
-                    <!--CE: End Page Field: Title Snippet-->
-                </div>
+                    <div class="ms-formfieldvaluecontainer">
+                        <div class="ms-rtestate-field">Description field value.</div>
+                    </div>
+                </div><!--PE: End of READ-ONLY PREVIEW-->
+                <!--ME:</PageFieldNoteField:NoteField>-->
+                <!--CE: End Page Field: Comments Snippet-->
             </div>
-
-            <div>                
-                <div data-name="Page Field: Comments" id="NewsSummary">
-                    <!--CS: Start Page Field: Comments Snippet-->
-                    <!--SPM:<%@Register Tagprefix="PageFieldNoteField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                    <!--MS:<PageFieldNoteField:NoteField FieldName="9da97a8a-1da5-4a77-98d3-4bc10456e700" runat="server">-->
-                    <!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
-                    <div align="left" class="ms-formfieldcontainer">
-                        <div class="ms-formfieldlabelcontainer" nowrap="nowrap">
-                            <span class="ms-formfieldlabel" nowrap="nowrap">Description</span>
-                        </div>
-                        <div class="ms-formfieldvaluecontainer">
-                            <div class="ms-rtestate-field">Description field value.</div>
-                        </div>
-                    </div><!--PE: End of READ-ONLY PREVIEW-->
-                    <!--ME:</PageFieldNoteField:NoteField>-->
-                    <!--CE: End Page Field: Comments Snippet-->
-                </div>
-            </div>
+        </div>
         <div id="TopHeaderDiv" class="clearfix"> <!--Top header-->
             <div id="TopLeftHeaderDiv"> <!--Top left Header-->
-                <div>
+                <div id="Image-Container-Left">
                     <div data-name="Page Field: HeaderImageLeft">
                         <!--CS: Start Page Field: HeaderImageLeft Snippet-->
                         <!--SPM:<%@Register Tagprefix="PageFieldRichImageField" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
@@ -174,9 +173,9 @@ To build the page layout directly from this HTML file, simply fill in the conten
                     </div>
                 </div>
 
-                <div>
+                <div id="Quote-Container-Left">
                     <div data-name="Page Field: HeaderQuoteLeft" class="Quote">
-                        <img src="https://codedocs.sharepoint.com/sites/intranet/Style%20Library/DI/PageLayouts/leftquote.png" alt="Left Quote" />
+                        <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Images/leftquote.png" alt="Left Quote" />
                         <!--CS: Start Page Field: HeaderQuoteLeft Snippet-->
                         <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
                         <!--MS:<PageFieldTextField:TextField FieldName="a8c18bc1-17e9-4f1b-8c49-aa338db70b43" runat="server">-->
@@ -188,7 +187,7 @@ To build the page layout directly from this HTML file, simply fill in the conten
                         <!--PE: End of READ-ONLY PREVIEW-->
                         <!--ME:</PageFieldTextField:TextField>-->
                         <!--CE: End Page Field: HeaderQuoteLeft Snippet-->
-                        <img src="https://codedocs.sharepoint.com/sites/intranet/Style%20Library/DI/PageLayouts/rightquote.png" alt="Right Quote" />
+                        <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Images/rightquote.png" alt="Right Quote" />
                     </div>
                 </div>
                 <div>
@@ -211,7 +210,7 @@ To build the page layout directly from this HTML file, simply fill in the conten
             </div> <!--End Top Left Header-->
             <div id="TopMiddleHeaderDiv">&nbsp;</div>
             <div id="TopRightHeaderDiv"> <!--Top Right Header-->
-                <div>
+                <div id="Image-Container-Right">
                     <div data-name="Page Field: HeaderImageRight" id="HeaderImageRight">
                         <!--CS: Start Page Field: HeaderImageRight Snippet-->
                         <!--SPM:<%@Register Tagprefix="PageFieldRichImageField" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
@@ -267,9 +266,9 @@ To build the page layout directly from this HTML file, simply fill in the conten
                         <!--CE: End Page Field: HeaderImageRightCopyright Snippet-->
                     </div>
                 </div>
-                <div>
+                <div id="Quote-Container-Right">
                     <div data-name="Page Field: HeaderQuoteRight">
-                        <img src="https://codedocs.sharepoint.com/sites/intranet/Style%20Library/DI/PageLayouts/leftquote.png" alt="Left Quote" />
+                        <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Images/leftquote.png" alt="Left Quote" />
                         <!--CS: Start Page Field: HeaderQuoteRight Snippet-->
                         <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
                         <!--MS:<PageFieldTextField:TextField FieldName="ffddd9b1-6338-43e1-a6a8-9942944a4d4d" runat="server">-->
@@ -283,7 +282,7 @@ To build the page layout directly from this HTML file, simply fill in the conten
                         <!--PE: End of READ-ONLY PREVIEW-->
                         <!--ME:</PageFieldTextField:TextField>-->
                         <!--CE: End Page Field: HeaderQuoteRight Snippet-->
-                        <img src="https://codedocs.sharepoint.com/sites/intranet/Style%20Library/DI/PageLayouts/rightquote.png" alt="Right Quote" />
+                        <img src="https://codedocs.sharepoint.com/sites/intranet/_catalogs/masterpage/DI/Images/rightquote.png" alt="Right Quote" />
                     </div>
                 </div>
                 <div>
@@ -430,23 +429,24 @@ To build the page layout directly from this HTML file, simply fill in the conten
             
              
             <div id="BottomBottom">
-                <div data-name="Page Field: Meta Keywords">
-                    <!--CS: Start Page Field: Meta Keywords Snippet-->
-                    <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <div data-name="EditModePanelShowInEdit">
+                    <!--CS: Start Edit Mode Panel Snippet-->
+                    <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
                     <!--MS:<Publishing:EditModePanel runat="server" CssClass="edit-mode-panel">-->
-                    <!--MS:<PageFieldTextField:TextField FieldName="45ae2169-585c-440b-aa4c-1d5e981fbbe5" runat="server">-->
-                    <!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
-                    <div align="left" class="ms-formfieldcontainer">
-                        <div class="ms-formfieldlabelcontainer" nowrap="nowrap">
-                            <span class="ms-formfieldlabel" nowrap="nowrap">Meta Keywords</span>
-                        </div>
-                        <div class="ms-formfieldvaluecontainer">Meta Keywords field value.</div>
+                    <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+                    <div data-name="Page Field: TLB">
+                        <!--CS: Start Page Field: TLB Snippet--><!--SPM:<%@Register Tagprefix="PageFieldTaxonomyFieldControl" Namespace="Microsoft.SharePoint.Taxonomy" Assembly="Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>--><!--MS:<PageFieldTaxonomyFieldControl:TaxonomyFieldControl FieldName="17380538-b732-4396-b6eb-4733de652604" runat="server">--><!--PS: Start of READ-ONLY PREVIEW (do not modify)--><div align="left" class="ms-formfieldcontainer"><div class="ms-formfieldlabelcontainer" nowrap="nowrap"><span class="ms-formfieldlabel" nowrap="nowrap">TLB</span></div><div class="ms-formfieldvaluecontainer"></div></div><!--PE: End of READ-ONLY PREVIEW--><!--ME:</PageFieldTaxonomyFieldControl:TaxonomyFieldControl>--><!--CE: End Page Field: TLB Snippet-->
                     </div>
-                    <!--PE: End of READ-ONLY PREVIEW-->
-                    <!--ME:</PageFieldTextField:TextField>-->
+
+                    <div data-name="Page Field: Enterprise Keywords">
+                        <!--CS: Start Page Field: Enterprise Keywords Snippet--><!--SPM:<%@Register Tagprefix="PageFieldTaxonomyFieldControl" Namespace="Microsoft.SharePoint.Taxonomy" Assembly="Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>--><!--MS:<PageFieldTaxonomyFieldControl:TaxonomyFieldControl FieldName="23f27201-bee3-471e-b2e7-b64fd8b7ca38" runat="server">--><!--PS: Start of READ-ONLY PREVIEW (do not modify)--><div align="left" class="ms-formfieldcontainer"><div class="ms-formfieldlabelcontainer" nowrap="nowrap"><span class="ms-formfieldlabel" nowrap="nowrap">Enterprise Keywords</span></div><div class="ms-formfieldvaluecontainer"></div></div><!--PE: End of READ-ONLY PREVIEW--><!--ME:</PageFieldTaxonomyFieldControl:TaxonomyFieldControl>--><!--CE: End Page Field: Enterprise Keywords Snippet-->
+                    </div>
+                    <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
                     <!--ME:</Publishing:EditModePanel>-->
-                    <!--CE: End Page Field: Meta Keywords Snippet-->
+                    <!--CE: End Edit Mode Panel Snippet-->
                 </div>
+
+
             </div>
         </div>
         <!--ME:</asp:ContentPlaceHolder>-->
