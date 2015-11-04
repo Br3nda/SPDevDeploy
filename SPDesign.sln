@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPDeploy", "SPDeploy\SPDepl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deploy", "Deploy\Deploy.csproj", "{0E057F1F-4A3E-4BC6-A9B1-D800700CAE7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feedback", "Feedback\Feedback.csproj", "{B337867D-8CFB-47B6-B70D-B9198343955F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{0E057F1F-4A3E-4BC6-A9B1-D800700CAE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E057F1F-4A3E-4BC6-A9B1-D800700CAE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E057F1F-4A3E-4BC6-A9B1-D800700CAE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B337867D-8CFB-47B6-B70D-B9198343955F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B337867D-8CFB-47B6-B70D-B9198343955F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B337867D-8CFB-47B6-B70D-B9198343955F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B337867D-8CFB-47B6-B70D-B9198343955F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B337867D-8CFB-47B6-B70D-B9198343955F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B337867D-8CFB-47B6-B70D-B9198343955F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

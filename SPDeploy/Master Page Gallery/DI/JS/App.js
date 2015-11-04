@@ -1,7 +1,16 @@
-﻿var MODDIAppJS = MODDIAppJs || {}; //get reference or create anew
+﻿//Q. Does each developer create their own object for the piece of
+//deevlopment or is it one perdomain - mayme it's a combincation
+//e.g MOD.DI.<CodePiece>
+
+//One javascript file or multiple javascript files?
+//One means potential conflicts updating by multiple developers but it can be minified 
+//and means only one file to miantain.
+
+var MOD = MOD || {};
+MOD.DIJS = MOD.DIJS || {};
 
 //With IIFE anything needed later must be returned
-MODDIAppJS.HideIrrelevantDOM = function () {
+MOD.DIJS.HideIrrelevantDOM = function () {
     //Hide elements if no image or no quote
     if ($('#Image-Container-Right').find('img').length == 0) {
         $('#TopRightHeaderDiv').hide();
@@ -23,5 +32,5 @@ MODDIAppJS.HideIrrelevantDOM = function () {
 };
 
 $(document).ready(function () {
-    MODDIAppJS.HideIrrelevantDOM
+    MOD.DIJS.HideIrrelevantDOM();
 });

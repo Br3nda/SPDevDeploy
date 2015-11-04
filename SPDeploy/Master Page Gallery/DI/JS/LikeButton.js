@@ -1,14 +1,18 @@
 ﻿//this below is just to hide an image we don't want to see on a page layout
 $(document).ready(function () {
+    var MOD = MOD || {};
+    MOD.DIJS = MOD.DIJS || {};
+
     //Ensure the sp.js file is loaded and then invoke the function 
-    SP.SOD.loadMultiple(['sp.js', 'reputation.js'], IsLiked);    
+    SP.SOD.loadMultiple(['sp.js', 'reputation.js'], MOD.DIJS.IsLiked);
 });
+
 
 
 //Determine if page already liked by this person and display accordingly
 //TODO:Catch if LikedBy and LikesCount are undefined - if they are the library may not be configured
 //for likes and we should not show the Like link
-function IsLiked() {    
+MOD.DIJS.IsLiked = function() {    
     var likesCount = 0;
     var Liked = false;
     var context = new SP.ClientContext.get_current();
@@ -49,7 +53,7 @@ function IsLiked() {
 }
 
 //This function called by the Like hyperlink on the pagelayout
-function LikePage() {
+MOD.DIJS.LikePage = function() {
     console.log('In LikePage');    
     SP.SOD.loadMultiple(['sp.js', 'reputation.js'], doWork)
 
