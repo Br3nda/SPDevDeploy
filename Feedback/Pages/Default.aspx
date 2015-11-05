@@ -8,9 +8,7 @@
 
 <%-- The markup and script in the following Content element will be placed in the <head> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
-    <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../Scripts/knockout-3.3.0.js"></script>
-    <script type="text/javascript" src="../Scripts/ko.sp-1.0.min.Ex.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>    
 
     <SharePoint:ScriptLink name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
     <meta name="WebPartPageExpansion" content="full" />
@@ -45,11 +43,16 @@
         <span class="feedback-lable">Subject: </span>
         <select id="Subject"><option id="General">General</option><option id="Technical">Technical</option></select>         
     </div>
+        <div class="feedback-left">
+        <span class="feedback-lable">Title: </span>
+        <input type="text" id="Title" />        
+    </div>
     <div class="feedback-left">
         <span class="feedback-lable">Feedback: </span>
-        <textarea rows="7" cols="50" id="Feedback"  />        
+        <textarea rows="7" cols="50" id="Feedback" ></textarea>       
     </div>
     <div>
+        <span class="feedback-lable">&nbsp;</span>
         <span>
            <input type="button" id="SubmitFeedback" value="Submit" onclick="feedBack.SubmitFeedback()" />
            <input type="reset" id="ResetFeedback" value="Reset" />
@@ -59,33 +62,5 @@
     <div>
         <p id="feedback-message">
         </p>
-    </div>
-    <div>
-        <table width="600px">
-            <thead>
-                <tr>
-                    <th>Created</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>URL</th>
-                    <th>Subject</th>
-                    <th>Feedback</th>
-                </tr>
-            </thead>
-            <tbody data-bind="template: { name: 'fb', foreach: DIFeedback }" />
-        </table>
-    </div>
-    <script type="text/html" id="fb">
-        <tr>
-            <td data-bind="text:spDate:Modified,dataFormat: 'DD-MMM-YYYY, hh:mm:ss a'"></td>
-            <td data-bind="spUser:modifiedBy"></td>
-            <td data-bind="text:Email"></td>
-            <td data-bind="text:URL"></td>
-            <td data-bind="text:Subject"></td>
-            <td data-bind="text:Feedback"></td>
-        </tr>
-    </script>
-    <script type="text/javascript">
-        function FeedbackModal
-    </script>
+    </div>      
 </asp:Content>

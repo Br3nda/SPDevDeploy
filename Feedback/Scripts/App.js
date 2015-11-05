@@ -2,12 +2,12 @@
 
 //JS Module Pattern - using IIFE
 var feedBack = (function () {
-    var DEBUG = true;
+    var DEBUG = false;
     var context;
     var FEEDBACK_LISTNAME = 'DIFeedback';
 
     var LogIt = function (message) {
-        if (DEBUG) {
+        if (DEBUG == true) {
             alert(message);
         } else {
             console.log(message);
@@ -18,31 +18,23 @@ var feedBack = (function () {
 
     SP.SOD.executeFunc('sp.js', 'SP.ClientContext', GetUser);
 
-    var GetUser = function () {
+    function GetUser () {
         LogIt('In GetUser')
         context = SP.ClientContext.get_current();
         var user = context.get_web().get_currentUser();
-
-        // This code runs when the DOM is ready and creates a context object which is needed to use the SharePoint object model
-        $(document).ready(function () {
-            getUserName();
-        });
-
-        // This function prepares, loads, and then executes a SharePoint query to get the current users information
-        function getUserName() {
-            context.load(user);
-            context.executeQueryAsync(onGetUserNameSuccess, onGetUserNameFail);
-        }
+           
+        context.load(user);
+        context.executeQueryAsync(onGetUserNameSuccess, onGetUserNameFail);
 
         // This function is executed if the above call is successful
         // It replaces the contents of the 'message' element with the user name
         function onGetUserNameSuccess() {
-            $('#Name').text(user.get_title());
+            $('#Name').val(user.get_title());
         }
 
         // This function is executed if the above call fails
         function onGetUserNameFail(sender, args) {
-            $('#Name').text('Anonymous');
+            $('#Name').val('Anonymous');
         }
     }
 
@@ -53,7 +45,10 @@ var feedBack = (function () {
         var itemCreateInfo = new SP.ListItemCreationInformation();
         var listItem = list.addItem(itemCreateInfo);
 
-        var sub = $('#Subject').html();
+        var sub = $('#Title').val();
+        listItem.set_item('Title', sub);
+
+        var sub = $('#Subject').val();
         listItem.set_item('Subject', sub);
 
         var nam = $('#Name').val()
@@ -73,7 +68,8 @@ var feedBack = (function () {
 
         context.executeQueryAsync(function () {
             LogIt('Success');
-            $('#feedback-message').text('Thanks for submitting feedback!');
+            alert('Thanks for submitting feedback!');
+
         },
         function (sender, args) {
             LogIt('Failed to AddFeedback because ' + args.get_message() + '\n' + args.get_stackTrace());
@@ -85,23 +81,19 @@ var feedBack = (function () {
     var CreateFeedbackList = function () {
         LogIt('In CreateFeedbackList');
         var web = context.get_web();
-
-        LogIt('In CreateFeedbackList.1');
+                
         //Create the list using ListCreationInformation
         var listCreationInfo = new SP.ListCreationInformation();
         listCreationInfo.set_title(FEEDBACK_LISTNAME);
         listCreationInfo.set_templateType(100);
-        LogIt('In CreateFeedbackList.2');
-
+        
         //Add to collection
         var list = web.get_lists().add(listCreationInfo);
-        LogIt('In CreateFeedbackList.3');
-
+        
         //Load and execute
         context.load(list);
         context.executeQueryAsync(ListCreated, ListNotCreated);
-        LogIt('In CreateFeedbackList.4');
-
+        
     };
 
     //List created ok - add the columns
@@ -109,7 +101,8 @@ var feedBack = (function () {
         LogIt('Created ' + FEEDBACK_LISTNAME + ' list.')
         var list = context.get_web().get_lists().getByTitle(FEEDBACK_LISTNAME);
         var fieldCollection = list.get_fields();
-
+                
+        //Title will already be there
         var SubjectSchema = '<Field Type="Text" DisplayName="Subject" Name="Subject" />';
         var NameSchema = '<Field Type="Text" DisplayName="Name" Name="Name" />';
         var URLSchema = '<Field Type="Text" DisplayName="URL" Name="URL" />';
@@ -138,6 +131,11 @@ var feedBack = (function () {
     var FieldsNotCreated = function (sender, args) {
         LogIt('Failed to create fields because ' + args.get_message() + '\n' + args.get_stackTrace());
     };
+     
+    var FeedbackItemsNotRetrieved = function (sender, args) {
+        LogIt('Failed to get Feedback items because ' + args.get_message() + '\n' + args.get_stackTrace());
+    };
+
 
     
 
@@ -180,7 +178,31 @@ var feedBack = (function () {
         }, //end SubmitFeedback - needs a comman if it's not last part of object literal
 
         GetFeedback: function () {
-            alert('Fill in later add to asp:gridview');
+            LogIt('In GetFeedback');
+            window.open(_spPageContextInfo.webAbsoluteUrl + '/Lists/DIFeedback/AllItems.aspx');
+            //var list = context.get_web().get_lists().getByTitle(FEEDBACK_LISTNAME);            
+            //var camlQuery = new SP.CamlQuery();            
+            //camlQuery.set_viewXml('<View><RowLimit>100</RowLimit></View>');            
+            //var items = list.getItems(camlQuery);
+            
+            //context.load(items);            
+            //context.executeQueryAsync(
+            //    function () {
+            //        LogIt('In FeedbackItemsRetrieved');
+            //        var itemEnumerator = items.getEnumerator();
+
+            //        while (itemEnumerator.moveNext()) {
+            //            var item = itemEnumerator.get_current();
+            //            var nameRow = "<td>" + item.get_item('Name')+ "</td>";
+            //            var emailRow = "<td>" + item.get_item('Email') + "</td>";
+            //            var urlRow = "<td>" + item.get_item('URL') + "</td>";
+            //            var subjectRow = "<td>" + item.get_item('Subject') + "</td>";
+            //            var feedbackRow = "<td>" + item.get_item('Feedback') + "</td>";
+            //            var itemRow = "<tr>" + nameRow + emailRow + urlRow + subjectRow + feedbackRow + "</tr>";
+            //            $('#Feedback-Results:last-child').append(itemRow);
+            //        }
+            //    },
+            //    FeedbackItemsNotRetrieved);
         }
     }; //end return
 
