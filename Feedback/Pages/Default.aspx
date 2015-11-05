@@ -29,23 +29,23 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
     <div class="feedback-left">
         <span class="feedback-lable">Name: </span>
-        <input type="text" id="Name" readonly="readonly"  /> <!--Make this Read-Only and auto-populated -->        
+        <input class="feedback-input" type="text" id="Name" readonly="readonly"  /> <!--Make this Read-Only and auto-populated -->        
     </div>
     <div class="feedback-left">
         <span class="feedback-lable">E-Mail:</span>
-        <input type="text" id="Email" /> <!--Validate-->        
+        <input class="feedback-input" type="text" id="Email" /> <!--Validate-->        
     </div>
     <div class="feedback-left">
         <span class="feedback-lable">URL: </span>
-        <input type="text" id="URL" /> <!-- Make this auto-populated-->        
+        <input class="feedback-input" type="text" id="URL" /> <!-- Make this auto-populated-->        
     </div>
     <div class="feedback-left">
         <span class="feedback-lable">Subject: </span>
-        <select id="Subject"><option id="General">General</option><option id="Technical">Technical</option></select>         
+        <select class="feedback-input" id="Subject"><option id="General">General</option><option id="Technical">Technical</option></select>         
     </div>
         <div class="feedback-left">
         <span class="feedback-lable">Title: </span>
-        <input type="text" id="Title" />        
+        <input class="feedback-input" type="text" id="Title" />        
     </div>
     <div class="feedback-left">
         <span class="feedback-lable">Feedback: </span>
@@ -56,7 +56,7 @@
         <span>
            <input type="button" id="SubmitFeedback" value="Submit" onclick="feedBack.SubmitFeedback()" />
            <input type="reset" id="ResetFeedback" value="Reset" />
-           <a href="javascript:void(0);" onclick="feedBack.GetFeedback();return false">View Feedback</a>
+           <a id="feedback-link" href="javascript:void(0);" onclick="feedBack.GetFeedback();return false">View Feedback</a>
         </span>
     </div>
     <div>

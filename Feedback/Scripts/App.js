@@ -67,9 +67,13 @@ var feedBack = (function () {
         context.load(listItem);
 
         context.executeQueryAsync(function () {
-            LogIt('Success');
+            LogIt('Successfully added feedback');
             alert('Thanks for submitting feedback!');
-
+            $('#Title').val('');            
+            $('#Name').val('');
+            $('#URL').val('');
+            $('#Feedback').val('');
+            $('#Email').val('');
         },
         function (sender, args) {
             LogIt('Failed to AddFeedback because ' + args.get_message() + '\n' + args.get_stackTrace());

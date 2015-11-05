@@ -3,7 +3,13 @@
     display:inline-block;
     width:150px;    
 }
-
+.feedback-input {
+    width: 240px;
+}
 .feedback-left{
     padding-bottom:8px;
 }
+.feedback-link{
+    position:relative;
+    left:150px;
+ }
