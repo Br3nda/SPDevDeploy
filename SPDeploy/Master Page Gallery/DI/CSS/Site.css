@@ -423,6 +423,11 @@ div#Footer_Right{
 	font-size:1.46em;
 }
 
+.Feedback{
+    text-decoration: none;   
+    color:#666 !important;
+}
+
 .clearfix:after {
 /*Does nothing in browse mode - see SiteInEditMode.css for effect in Auth*/
 }
