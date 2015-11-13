@@ -416,17 +416,10 @@ To build the page layout directly from this HTML file, simply fill in the conten
                         <!--ME:</PageFieldDateTimeField:DateTimeField>-->
                         <!--CE: End Page Field: Article Date Snippet-->
                     </div>
-                    <div>
-                        <!--CS: Start Edit Mode Panel Snippet-->
-                        <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                        <!--MS:<Publishing:EditModePanel runat="server" CssClass="edit-mode-panel">-->
-                        <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
-                            <input type="hidden" id="Liked" value="false" />
-                            <input type="hidden" id="LikedCount" value="0"/>
-                            <span>&nbsp;|&nbsp;<a id="LikeLink" href="javascript:void(0);" onclick="MOD.DIJS.LikePage();return false">Like</a> </span>
-                        <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
-                        <!--ME:</Publishing:EditModePanel>-->
-                        <!--CE: End Edit Mode Panel Snippet-->
+                    <div>                        
+                        <input type="hidden" id="Liked" value="false" />
+                        <input type="hidden" id="LikedCount" value="0"/>
+                        <span>&nbsp;|&nbsp;<a id="LikeLink" href="javascript:void(0);" onclick="MOD.DIJS.LikePage();return false">Like</a> </span>
                     </div>
                 </div>
                 <div id="BottomMiddleRightDiv">

@@ -35,7 +35,7 @@ MOD.DIJS.HideIrrelevantDOM = function () {
 };
 
 MOD.DIJS.AddRibbonElement = function () {
-    $('#RibbonContainer-TabRowRight').prepend("<a class='ms-promotedActionButton Feedback' href='#' onClick=window.open('https://codedocs.sharepoint.com/sites/intranet/_layouts/15/appredirect.aspx?instance_id={F827C48C-CB4C-43A4-B9A6-9C1CDC21AA09}','','width=800px,height=600px')>FEEDBACK</a>");    
+    $('#RibbonContainer-TabRowRight').prepend("<a class='ms-promotedActionButton Feedback' href='#' onClick=window.open('https://codedocs.sharepoint.com/sites/intranet/_layouts/15/appredirect.aspx?instance_id={F827C48C-CB4C-43A4-B9A6-9C1CDC21AA09}','','width=700px,height=500px')>FEEDBACK</a>");    
 }
 
 $(document).ready(function () {

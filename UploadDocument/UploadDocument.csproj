@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B337867D-8CFB-47B6-B70D-B9198343955F}</ProjectGuid>
+    <ProjectGuid>{09F4F897-F836-4F88-9DD8-90F419B0BAFF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Feedback</RootNamespace>
-    <AssemblyName>Feedback</AssemblyName>
+    <RootNamespace>UploadDocument</RootNamespace>
+    <AssemblyName>UploadDocument</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetOfficeVersion>16.1</TargetOfficeVersion>
     <FileAlignment>512</FileAlignment>
@@ -17,11 +17,11 @@
     <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
     <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
     <ProjectMode>SharePointApp</ProjectMode>
-    <AppFeaturePartId>{7d30ed3e-c4dd-4c42-8ab9-3c9b07f53c09}</AppFeaturePartId>
-    <WspPartId>{53841332-07ce-4d0d-bfac-17fdd3ca77e3}</WspPartId>
-    <WorkflowPartId>{ccaa27f6-5a8e-4c65-a603-506e70d8b20f}</WorkflowPartId>
-    <CspkgPartId>{540d9bc0-fda3-4575-b075-eb67cb7b59e2}</CspkgPartId>
-    <SqlPackagePartId>{237c6ff8-bd49-4ccf-976a-66d8f53fe38b}</SqlPackagePartId>
+    <AppFeaturePartId>{a87a49c9-e41c-4a9c-9b54-b52d1aed86bd}</AppFeaturePartId>
+    <WspPartId>{e895aacc-18b8-43ca-9271-83be6efe6008}</WspPartId>
+    <WorkflowPartId>{b383559a-9b23-4197-ab1b-2a82cebef5c8}</WorkflowPartId>
+    <CspkgPartId>{9e5d3fe1-3bc6-46a1-a887-f3a563e29ec7}</CspkgPartId>
+    <SqlPackagePartId>{274c9919-611a-477b-9c4b-76fefefb7c13}</SqlPackagePartId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,29 +45,26 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{3fec9f0c-0db7-4701-ab37-f50e2e8bfd70}</SharePointProjectItemId>
+      <SharePointProjectItemId>{00836471-e57f-489f-a81e-6587542b9a4a}</SharePointProjectItemId>
     </None>
-    <Content Include="Images\MOD.jpg" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{237c6ff8-bd49-4ccf-976a-66d8f53fe38b}</SharePointProjectItemId>
+      <SharePointProjectItemId>{274c9919-611a-477b-9c4b-76fefefb7c13}</SharePointProjectItemId>
     </None>
     <Content Include="Scripts\Elements.xml" />
     <Content Include="Scripts\App.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\knockout-3.3.0.js" />
-    <Content Include="Scripts\ko.sp-1.0.min.Ex.js" />
     <Content Include="Scripts\_references.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{8b66cfc1-3f8e-42a2-b696-33fe2cc69279}</SharePointProjectItemId>
+      <SharePointProjectItemId>{13d0d493-45a7-4015-b558-d19611846f09}</SharePointProjectItemId>
     </None>
     <Content Include="Content\Elements.xml" />
     <Content Include="Content\App.css" />
@@ -78,21 +75,21 @@
     </Content>
     <Content Include="Images\Elements.xml" />
     <None Include="Images\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{0520c683-18f3-47d3-8ffb-0ece87cb07b9}</SharePointProjectItemId>
+      <SharePointProjectItemId>{34561ea4-6a6d-4e9f-bcae-7afa04c45969}</SharePointProjectItemId>
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Package\Package.package">
-      <PackageId>{554460dd-c9f3-4c6c-ac4e-7c6d0e97c60f}</PackageId>
+      <PackageId>{49a5b71f-82f7-4ba7-a8db-b5897375460d}</PackageId>
     </None>
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Features\Feedback\Feedback.feature">
-      <FeatureId>{55a11a46-6cdf-451d-ac90-87b51be3b1bc}</FeatureId>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{a4d3d88e-b39d-41a8-b37a-29c322bc7601}</FeatureId>
     </None>
-    <None Include="Features\Feedback\Feedback.Template.xml">
-      <DependentUpon>Feedback.feature</DependentUpon>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

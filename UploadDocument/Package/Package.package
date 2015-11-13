@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="49a5b71f-82f7-4ba7-a8db-b5897375460d" 
+        solutionId="49a5b71f-82f7-4ba7-a8db-b5897375460d" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="UploadDocument"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="a4d3d88e-b39d-41a8-b37a-29c322bc7601" />
+  </features>
+</package>

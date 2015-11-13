@@ -1,5 +1,13 @@
 ﻿'use strict';
 
+$(document).ready(function () {
+    $('div#globalNavBox').hide();
+    $('div#suiteBarDelta').hide();
+    $(".ms-siteicon-a img").attr('src', '../Images/MOD.jpg');
+});
+
+
+
 //JS Module Pattern - using IIFE
 var feedBack = (function () {
     var DEBUG = false;
@@ -183,30 +191,7 @@ var feedBack = (function () {
 
         GetFeedback: function () {
             LogIt('In GetFeedback');
-            window.open(_spPageContextInfo.webAbsoluteUrl + '/Lists/DIFeedback/AllItems.aspx');
-            //var list = context.get_web().get_lists().getByTitle(FEEDBACK_LISTNAME);            
-            //var camlQuery = new SP.CamlQuery();            
-            //camlQuery.set_viewXml('<View><RowLimit>100</RowLimit></View>');            
-            //var items = list.getItems(camlQuery);
-            
-            //context.load(items);            
-            //context.executeQueryAsync(
-            //    function () {
-            //        LogIt('In FeedbackItemsRetrieved');
-            //        var itemEnumerator = items.getEnumerator();
-
-            //        while (itemEnumerator.moveNext()) {
-            //            var item = itemEnumerator.get_current();
-            //            var nameRow = "<td>" + item.get_item('Name')+ "</td>";
-            //            var emailRow = "<td>" + item.get_item('Email') + "</td>";
-            //            var urlRow = "<td>" + item.get_item('URL') + "</td>";
-            //            var subjectRow = "<td>" + item.get_item('Subject') + "</td>";
-            //            var feedbackRow = "<td>" + item.get_item('Feedback') + "</td>";
-            //            var itemRow = "<tr>" + nameRow + emailRow + urlRow + subjectRow + feedbackRow + "</tr>";
-            //            $('#Feedback-Results:last-child').append(itemRow);
-            //        }
-            //    },
-            //    FeedbackItemsNotRetrieved);
+            window.open(_spPageContextInfo.webAbsoluteUrl + '/Lists/DIFeedback/AllItems.aspx');           
         }
     }; //end return
 
