@@ -38,6 +38,7 @@ function uploadFile() {
 
                 //Change the display name and title of the list item
                 var changeItem = updateListItem(listItem.d.__metadata);
+
                 changeItem.done(function (data, status, xhr) {
                     alert('file uploaded and updated');
                 }); //changeItem.done

@@ -22,6 +22,7 @@
     <WorkflowPartId>{b383559a-9b23-4197-ab1b-2a82cebef5c8}</WorkflowPartId>
     <CspkgPartId>{9e5d3fe1-3bc6-46a1-a887-f3a563e29ec7}</CspkgPartId>
     <SqlPackagePartId>{274c9919-611a-477b-9c4b-76fefefb7c13}</SqlPackagePartId>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,8 +48,12 @@
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{00836471-e57f-489f-a81e-6587542b9a4a}</SharePointProjectItemId>
     </None>
+    <Content Include="Elements.xml" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e04d198b-a698-4c57-8d02-91fe5bcdc17b}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />
@@ -97,10 +102,40 @@
       <SubType>Designer</SubType>
     </AppManifestFile>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Extensions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=69c3241e6f0468ca, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PreBuildEvent>rem "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\x64\gacutil.exe" /if $(SolutionDir)packages\WebGrease.1.5.2\lib\WebGrease.dll
+rem $(SolutionDir)packages\WebGrease.1.5.2\tools\wg -v -in:$(ProjectDir)Scripts\App.js -out:$(ProjectDir)Scripts\validation.txt
+rem $(SolutionDir)packages\WebGrease.1.5.2\tools\wg -m -in:$(ProjectDir)Scripts\App.js -out:$(ProjectDir)Scripts\App.min.js
+</PreBuildEvent>
+  </PropertyGroup>
 </Project>
