@@ -8,6 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Note we would have a webjob running per customer.  Then this would allow for the customer to have 
+//multiple tenants as specified in the app.config.  All customers though could use the same AzureTable
+//With a partitionkey on 
+
 namespace GetActivePublishersWebJob
 {
     class Program
