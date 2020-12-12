@@ -1,5 +1,5 @@
 ﻿//Q. Does each developer create their own object for the piece of
-//deevlopment or is it one perdomain - mayme it's a combination
+//development or is it one perdomain - mayme it's a combination
 //e.g MOD.DI.<CodePiece>
 
 //One javascript file or multiple javascript files?
